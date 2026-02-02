@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VerifyAI - 深度反向圖片搜尋，守護你的每一次網路互動" />
+  <title>VerifyAI - 讓信任有依據</title>
+
+  <link rel="icon" href="/logov2.png" />
+  <link rel="apple-touch-icon" href="/logov2.png" />
+  <link rel="canonical" href="https://verifyai01.pages.dev" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VerifyAI - 深度反向圖片搜尋" />
+  <meta property="og:description" content="AI 驅動的圖片真偽驗證工具，保護你免受網路詐騙" />
+  <meta property="og:image" content="https://verifyai01.pages.dev/logov2.png" />
+  <meta property="og:url" content="https://verifyai01.pages.dev" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+  <meta property="og:locale:alternate" content="ko_KR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VerifyAI - 深度反向圖片搜尋" />
+  <meta name="twitter:description" content="AI 驅動的圖片真偽驗證工具，保護你免受網路詐騙" />
+  <meta name="twitter:image" content="https://verifyai01.pages.dev/logov2.png" />
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "VerifyAI",
+    "url": "https://verifyai01.pages.dev",
+    "logo": "https://verifyai01.pages.dev/logov2.png"
+  }
+  </script>
+
+  <!-- SoftwareApplication JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VerifyAI",
+    "operatingSystem": "iOS",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "downloadUrl": "https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420"
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "我上傳的照片會被儲存嗎?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不會。照片只在搜尋過程中暫時處理，完成後即刪除，也不會用來訓練模型或分享給第三方。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "免費版和 Pro 版差在哪?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "免費版只使用1個搜尋引擎；Pro 版同時使用5個專業引擎，更適合你已覺得不太對勁、想多確認的情況。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "單次搜尋需要多久時間?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "免費版大約 10-20 秒。Pro 版因需要跑 5個引擎，可能要 30-60 秒，視網路速度而定。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VerifyAI的主要目的",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我們專心想要解決網路戀情中有些人會藉機詐騙的問題，一直以來這些詐騙者都是用網路盜圖作為道具，VerifyAI盡可能為你確認來自網友的照片是不是真的是他的照片，如果不是，那這個人就非常可疑，你應該直接詢問他或者與親友討論。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VerifyAI的原理",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "如果拿你我的自拍或者日常照在網路上逆向搜尋，通常不容易在網路上找到一樣的照片（除非對方就是名人）。因此，如果對方傳給你的照片可以在網路上找到非常多「完全相同」照片，我們認為這位網友一定非常可疑，建議你一定要謹慎。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VerifyAI如何判斷風險？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "我們是用該照片在網路上可以找到多少張一樣的為判斷標準。數量愈多表示那張照片的主角越有名，我們假設名人不太可能在線上找網友。如果照片來自商業圖庫則最為可疑，因為照片直接是用買的。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "從詐騙嫌疑的角度，VerifyAI的侷限",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1. 我們不是臉部辨識 app，所以不能搜尋某個人的不同姿勢角度照片。2. 我們無法辨識 AI圖，目前的技術還沒有真的能百分百辨別某個人是否為 AI生成，也許技術成熟後，會加入這個功能。3. 全世界有些地方因為法規等問題，較難搜尋到人像，我們會繼續想辦法。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "可以一次上傳多張照片嗎?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "目前一次只能上傳一張，我們之後會評估批次上傳功能。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如果沒有找到任何結果怎麼辦?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "可能是照片很新、品質不好或搜尋範圍有限。建議改用 Pro 版或嘗試其他照片。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

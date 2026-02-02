@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /deployment/
+Disallow: /.git/
+
+Sitemap: https://verifyai01.pages.dev/sitemap.xml

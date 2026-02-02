@@ -1,0 +1,193 @@
+{
+  "meta": {
+    "title": "VerifyAI - Deep Reverse Image Search",
+    "description": "AI-powered photo verification tool, protecting every online interaction"
+  },
+  "nav": {
+    "features": "Use Cases",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "english": "English",
+    "chinese": "繁體中文",
+    "japanese": "日本語",
+    "korean": "한국어"
+  },
+  "hero": {
+    "label": "Deep Reverse Image Search",
+    "title": "Trust with Evidence",
+    "subtitle": "VerifyAI helps you verify photo authenticity in one tap",
+    "description": "AI-powered photo verification, protecting every online interaction",
+    "ctaButton": "Download Free",
+    "ctaSecondary": "Learn How It Works"
+  },
+  "features": {
+    "label": "Use Cases",
+    "title": "<em>\"In this era of mixed truth online, helping you spot risks and protect relationships\"</em>",
+    "description": "From dating apps to business dealings, VerifyAI has you covered",
+    "dating": {
+      "title": "Dating Apps",
+      "description": "Avoid fake photos and make every match with confidence"
+    },
+    "social": {
+      "title": "Social Media",
+      "description": "Identify fake accounts and forged content to protect your digital safety"
+    },
+    "business": {
+      "title": "Business Dealings",
+      "description": "Verify partner identity and reduce transaction risks"
+    },
+    "ecommerce": {
+      "title": "Online Shopping",
+      "description": "Confirm seller authenticity and avoid scams and counterfeits"
+    }
+  },
+  "howItWorks": {
+    "label": "Simple 3-Step Process",
+    "title": "From Doubt to Confidence in Three Steps",
+    "description": "A complete verification process for easy photo authenticity assessment",
+    "step1": {
+      "number": "01",
+      "title": "Encounter Suspicious Photo",
+      "description": "Receive a suspicious photo on social media or dating platforms"
+    },
+    "step2": {
+      "number": "02",
+      "title": "Share to VerifyAI",
+      "description": "Long-press the photo or upload directly from your album to VerifyAI"
+    },
+    "step3": {
+      "number": "03",
+      "title": "Get Verification Report",
+      "description": "Receive a complete analysis and trace the photo's source"
+    }
+  },
+  "technology": {
+    "label": "Powerful Technology",
+    "title": "Core Engine",
+    "description": "Precise technology ensuring highest accuracy",
+    "reverseSearch": {
+      "title": "Reverse Image Search",
+      "description": "Track photo origin and usage history"
+    },
+    "metadata": {
+      "title": "Metadata Analysis",
+      "description": "Check photo modifications and source information"
+    },
+    "faceMatch": {
+      "title": "Face Matching",
+      "description": "Multi-angle identity consistency verification"
+    }
+  },
+  "mission": {
+    "label": "Our Mission",
+    "title": "Why We Do This",
+    "description": "Driven by genuine social concern, providing effective tools for those at risk",
+    "quote": "Tracing a photo's origin and revealing that the person behind the image is someone else entirely is the most effective way to help someone realize the truth.",
+    "body": "We believe that when a person can see the evidence with their own eyes — discovering that the photo they were sent actually belongs to someone else — that moment of realization is more powerful than any amount of persuasion. VerifyAI exists to make that step easy for everyone."
+  },
+  "testimonials": {
+    "label": "Real Voices",
+    "title": "What People Say",
+    "description": "Genuine feedback from different perspectives",
+    "expert": {
+      "role": "Anti-Fraud Expert",
+      "quote": "Reverse image search — finding the original source of a photo — is the most evidence-based and persuasive approach."
+    },
+    "victim": {
+      "role": "Online Romance Victim",
+      "quote": "It wasn't until I saw that the photo of the person I'd been chatting with actually belonged to someone with a completely different name that I finally realized I had been deceived."
+    },
+    "team": {
+      "role": "VerifyAI Team",
+      "quote": "We simply want to make reverse image search a one-tap action for everyone, because we believe this alone can prevent so many scams."
+    }
+  },
+  "campaign": {
+    "label": "Protect Together",
+    "title": "Share with Those Who Need It",
+    "description": "Someone around you may be trapped in doubt. Sharing this app could be the crucial step that helps them see the truth.",
+    "subscribe": {
+      "title": "Subscribe for Updates",
+      "description": "Subscribe for a chance to receive an Apple redemption code",
+      "placeholder": "Enter your email",
+      "button": "Subscribe",
+      "note": "No spam, unsubscribe anytime",
+      "success": "Thank you! Please check your inbox for confirmation."
+    },
+    "share": {
+      "title": "Share with Friends",
+      "description": "Help more people stay safe from online scams",
+      "message": "VerifyAI - Deep reverse image search to protect your online safety",
+      "copy": "Copy Link",
+      "copied": "Copied to clipboard!"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "title": "Frequently Asked Questions",
+    "description": "Things you may want to know about VerifyAI",
+    "items": [
+      {
+        "question": "Will my uploaded photos be stored?",
+        "answer": "No. Photos are only temporarily processed during the search and are deleted upon completion. They are never used to train models or shared with third parties."
+      },
+      {
+        "question": "What's the difference between Free and Pro?",
+        "answer": "The free version uses 1 search engine; the Pro version simultaneously uses 5 professional engines, better suited for situations where you already feel something is off and want extra confirmation."
+      },
+      {
+        "question": "How long does a single search take?",
+        "answer": "The free version takes about 10-20 seconds. The Pro version may take 30-60 seconds as it runs 5 engines, depending on network speed."
+      },
+      {
+        "question": "What is VerifyAI's main purpose?",
+        "answer": "We focus on solving the problem of romance scammers who exploit online relationships. These scammers typically use stolen photos as their tools. VerifyAI helps you verify whether the photos from online contacts actually belong to them. If not, that person is highly suspicious and you should confront them directly or discuss with trusted friends and family."
+      },
+      {
+        "question": "How does VerifyAI work?",
+        "answer": "If you reverse-search your own selfies or everyday photos online, you typically won't find matching results (unless you're a celebrity). Therefore, if someone's photo can be found extensively online with many \"identical\" matches, we consider that person highly suspicious. We suggest you exercise caution."
+      },
+      {
+        "question": "How does VerifyAI assess risk?",
+        "answer": "We assess risk based on how many identical copies of a photo can be found online. The more copies found, the more famous the person in the photo likely is — and we assume celebrities are unlikely to seek online acquaintances. Photos from commercial stock libraries are the most suspicious, as they were purchased directly."
+      },
+      {
+        "question": "What are VerifyAI's limitations regarding fraud detection?",
+        "answer": "1. We are not a facial recognition app, so we cannot search for different angles or poses of the same person. 2. We cannot identify AI-generated images — current technology cannot guarantee 100% detection of AI-generated faces. We may add this feature when the technology matures. 3. Some regions (such as North Korea, China, etc.) have limited searchable portraits due to regulatory issues. We continue working on solutions."
+      },
+      {
+        "question": "Can I upload multiple photos at once?",
+        "answer": "Currently, you can only upload one photo at a time. We will evaluate batch upload functionality in the future."
+      },
+      {
+        "question": "What if no results are found?",
+        "answer": "The photo may be new, of poor quality, or outside the search scope. We suggest trying the Pro version or using a different photo."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Trust with Evidence?",
+    "description": "Start using VerifyAI now to protect every online interaction",
+    "button": "Download Free",
+    "note": ""
+  },
+  "footer": {
+    "brandTitle": "VerifyAI",
+    "brandDescription": "Deep reverse image search — AI provides reliable identity verification for your social and business interactions.",
+    "product": {
+      "title": "Product",
+      "features": "Features",
+      "technology": "Core Technology",
+      "changelog": "What's New"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "email": "Customer Support:"
+    },
+    "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
+  }
+}
