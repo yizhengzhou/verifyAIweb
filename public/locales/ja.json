@@ -14,9 +14,9 @@
   },
   "hero": {
     "label": "ディープ逆画像検索",
-    "title": "信頼に根拠を",
-    "subtitle": "VerifyAI でワンタップで写真の真偽を確認",
-    "description": "AI駆動の写真真偽検証、すべてのオンライン交流を守ります",
+    "title": "",
+    "subtitle": "",
+    "description": "あらゆる写真のソースとオンラインでの使用履歴を逆追跡します。VerifyAI は複数のエンジン（Google グローバル検索、Google レンズ、Yandex、商用ストックライブラリなど）を検索し、画像が表示された場所や、ネット上でどのように再利用されているかを表示します。",
     "ctaButton": "無料ダウンロード",
     "ctaSecondary": "仕組みを見る"
   },
@@ -38,7 +38,11 @@
     },
     "ecommerce": {
       "title": "オンラインショッピング",
-      "description": "販売者の真実性を確認し、詐欺や偽物を回避"
+      "description": "販売者の真正性を確認し、詐欺や偽物を回避"
+    },
+    "self_verification": {
+      "title": "自己検証",
+      "description": "自分の写真が盗用されていないか確認"
     }
   },
   "howItWorks": {

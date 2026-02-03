@@ -14,9 +14,9 @@
   },
   "hero": {
     "label": "Deep Reverse Image Search",
-    "title": "Trust with Evidence",
-    "subtitle": "VerifyAI helps you verify photo authenticity in one tap",
-    "description": "AI-powered photo verification, protecting every online interaction",
+    "title": "",
+    "subtitle": "",
+    "description": "Reverse trace the source and online history of any photo. VerifyAI searches multiple engines (Google Global Search, Google Lens, Yandex, commercial stock libraries, etc.) to show where the image has appeared and how it is being reused online.",
     "ctaButton": "Download Free",
     "ctaSecondary": "Learn How It Works"
   },
@@ -39,6 +39,10 @@
     "ecommerce": {
       "title": "Online Shopping",
       "description": "Confirm seller authenticity and avoid scams and counterfeits"
+    },
+    "self_verification": {
+      "title": "Self Verification",
+      "description": "Check if your photos are being stolen or misused"
     }
   },
   "howItWorks": {
