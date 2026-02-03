@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../context/I18nContext'
+import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const { t, lang, changeLanguage, supportedLanguages } = useI18n()
@@ -22,7 +23,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          {menuOpen ? '\u2715' : '\u2630'}
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>

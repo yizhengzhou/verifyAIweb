@@ -20,10 +20,10 @@ export default function App() {
     <>
       <Navbar />
       <Hero />
-      <Features />
+      <Mission />
       <HowItWorks />
       <Technology />
-      <Mission />
+      <Features />
       <Testimonials />
       <Campaign />
       <FAQ />

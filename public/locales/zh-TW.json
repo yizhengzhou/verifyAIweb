@@ -14,9 +14,9 @@
   },
   "hero": {
     "label": "深度反向圖片搜尋",
-    "title": "讓信任有依據",
-    "subtitle": "VerifyAI 協助你一鍵查證照片真偽",
-    "description": "AI 驅動的圖片真偽驗證，守護你的每一次網路互動",
+    "title": "",
+    "subtitle": "",
+    "description": "反向追溯任何照片的來源和線上使用歷史。VerifyAI 搜尋多個引擎（Google 全球搜尋、Google Lens、Yandex、商用圖庫等），顯示圖片曾出現的位置，以及在網路上如何被重複使用。",
     "ctaButton": "立即免費下載",
     "ctaSecondary": "了解驗證流程"
   },
@@ -39,6 +39,10 @@
     "ecommerce": {
       "title": "線上購物",
       "description": "確認賣家真實性，避免詐騙與假貨"
+    },
+    "self_verification": {
+      "title": "自我驗證",
+      "description": "查看自己的照片是否有被盜疑慮"
     }
   },
   "howItWorks": {

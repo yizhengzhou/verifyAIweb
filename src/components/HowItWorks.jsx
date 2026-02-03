@@ -1,9 +1,11 @@
 import { useI18n } from '../context/I18nContext'
+import { Upload, Cpu, CheckCircle } from 'lucide-react'
+import Carousel from './Carousel'
 
 const steps = [
-  { key: 'step1', icon: '\uD83D\uDCE4' },
-  { key: 'step2', icon: '\uD83E\uDD16' },
-  { key: 'step3', icon: '\u2705' },
+  { key: 'step1', icon: <Upload size={32} /> },
+  { key: 'step2', icon: <Cpu size={32} /> },
+  { key: 'step3', icon: <CheckCircle size={32} /> },
 ]
 
 export default function HowItWorks() {
@@ -28,6 +30,10 @@ export default function HowItWorks() {
               <p>{t(`howItWorks.${key}.description`)}</p>
             </div>
           ))}
+        </div>
+
+        <div className="carousel-container" style={{ marginTop: '60px' }}>
+          <Carousel />
         </div>
       </div>
     </section>

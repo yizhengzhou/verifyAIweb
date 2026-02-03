@@ -1,9 +1,10 @@
 import { useI18n } from '../context/I18nContext'
+import { GraduationCap, HeartCrack, Shield } from 'lucide-react'
 
 const items = [
-  { key: 'expert', icon: '\uD83C\uDF93' },
-  { key: 'victim', icon: '\uD83D\uDC94' },
-  { key: 'team', icon: '\uD83D\uDEE1\uFE0F' },
+  { key: 'expert', icon: <GraduationCap size={32} /> },
+  { key: 'victim', icon: <HeartCrack size={32} /> },
+  { key: 'team', icon: <Shield size={32} /> },
 ]
 
 export default function Testimonials() {

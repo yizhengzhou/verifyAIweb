@@ -7,25 +7,20 @@ export default function Hero() {
 
   return (
     <div className="hero">
-      <div className="hero-card">
-        <span className="hero-label">{t('hero.label')}</span>
-        <h1>
-          {t('hero.title')}
-          <br />
-          <span className="subtitle">{t('hero.subtitle')}</span>
-        </h1>
-        <p className="hero-description">{t('hero.description')}</p>
+      <div className="hero-container">
+        <div className="hero-big-text">VerifyAI</div>
+        <p className="hero-long-description">{t('hero.description')}</p>
         <div className="cta-buttons">
           <a
             href={APP_STORE_URL}
-            className="btn btn-primary"
+            className="btn btn-primary btn-round"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${t('hero.ctaButton')} - App Store`}
           >
             {t('hero.ctaButton')}
           </a>
-          <a href="#howItWorks" className="btn btn-secondary">
+          <a href="#howItWorks" className="btn btn-secondary btn-round">
             {t('hero.ctaSecondary')}
           </a>
         </div>

@@ -1,9 +1,10 @@
 import { useI18n } from '../context/I18nContext'
+import { Search, FileText, ScanFace } from 'lucide-react'
 
 const items = [
-  { key: 'reverseSearch', icon: '\uD83D\uDD0D' },
-  { key: 'metadata', icon: '\uD83D\uDCCA' },
-  { key: 'faceMatch', icon: '\uD83D\uDC64' },
+  { key: 'reverseSearch', icon: <Search size={40} /> },
+  { key: 'metadata', icon: <FileText size={40} /> },
+  { key: 'faceMatch', icon: <ScanFace size={40} /> },
 ]
 
 export default function Technology() {

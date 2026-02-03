@@ -1,7 +1,9 @@
 /* VerifyAI Landing Page - Brand Guideline Compliant CSS */
 
 /* === Reset === */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -45,14 +47,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.3; }
-h2 { font-size: 2rem; font-weight: 600; line-height: 1.4; }
-h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.4; }
-p { font-size: 1rem; line-height: 1.6; }
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
 @media (min-width: 768px) {
-  h1 { font-size: 3rem; }
-  h2 { font-size: 2.5rem; }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* === Navigation === */
@@ -164,6 +189,7 @@ p { font-size: 1rem; line-height: 1.6; }
   .mobile-menu-btn {
     display: block;
   }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -177,9 +203,11 @@ p { font-size: 1rem; line-height: 1.6; }
     border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
+
   .nav-links.open {
     display: flex;
   }
+
   .lang-switcher {
     flex-wrap: wrap;
     justify-content: center;
@@ -320,7 +348,9 @@ p { font-size: 1rem; line-height: 1.6; }
 }
 
 @media (min-width: 768px) {
-  .section-title { font-size: 2.5rem; }
+  .section-title {
+    font-size: 2.5rem;
+  }
 }
 
 /* === Card Grid === */
@@ -598,10 +628,21 @@ p { font-size: 1rem; line-height: 1.6; }
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.share-btn.line { background: #06C755; }
-.share-btn.facebook { background: #1877F2; }
-.share-btn.x { background: #000000; }
-.share-btn.copy { background: var(--graphite); }
+.share-btn.line {
+  background: #06C755;
+}
+
+.share-btn.facebook {
+  background: #1877F2;
+}
+
+.share-btn.x {
+  background: #000000;
+}
+
+.share-btn.copy {
+  background: var(--graphite);
+}
 
 .copy-toast {
   font-size: 0.85rem;
@@ -718,7 +759,9 @@ p { font-size: 1rem; line-height: 1.6; }
 }
 
 @media (min-width: 768px) {
-  .cta-section h2 { font-size: 2.5rem; }
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* === Footer === */
@@ -794,8 +837,314 @@ p { font-size: 1rem; line-height: 1.6; }
 
 /* === Utility === */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
+}
+
+/* === Hero Improvements === */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 40px 40px;
+  padding-bottom: 60px;
+  /* Add some bottom padding */
+}
+
+.hero-background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  /* Blend nicely */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 60px 24px;
+}
+
+.hero-card {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+
+.hero-label {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.hero h1 {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+/* === Carousel === */
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  cursor: grab;
+}
+
+.carousel-wrapper:active {
+  cursor: grabbing;
+}
+
+.inner-carousel {
+  display: flex;
+  gap: 20px;
+}
+
+.carousel-item {
+  min-width: 260px;
+  max-width: 300px;
+  /* Constrain width */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  /* Prevent squishing */
+}
+
+.carousel-item:hover {
+  transform: scale(1.02);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === CSS Refinements - Aerora Style & User Requests === */
+
+/* Hero V2: Screenshot Match */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #3ebea6;
+  /* Base solid color match */
+  background: linear-gradient(180deg, #3ebea6 0%, #3ebea6 100%);
+  /* Flat/Subtitle gradient if needed, but screenshot looks efficiently flat teal or slight gradient */
+  color: white;
+  min-height: 100vh;
+  /* Full viewport height or close to it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 !important;
+  /* Force square corners */
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-big-text {
+  font-size: clamp(4rem, 18vw, 15rem);
+  /* Responsive huge text */
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin-bottom: 60px;
+  user-select: none;
+
+  /* Gradient Text Effect: White to Transparent */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.1) 85%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.hero-long-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  color: rgba(255, 255, 255, 0.95);
+  /* High contrast */
+  font-weight: 500;
+  text-align: center;
+  /* Ensure it's not hidden */
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.hero .cta-buttons {
+  justify-content: center;
+  gap: 24px;
+}
+
+.btn-round {
+  border-radius: 50px !important;
+  /* Fully rounded buttons as per screenshot usually implies */
+  padding: 16px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-primary.btn-round {
+  background: white;
+  color: #3ebea6;
+  /* Match bg */
+  font-weight: 700;
+}
+
+.btn-secondary.btn-round {
+  border: 1.5px solid white;
+  background: transparent;
+  color: white;
+}
+
+/* Cleanup old Hero styles */
+.hero-background-text,
+.hero-content,
+.hero-label {
+  display: none;
+}
+
+
+/* Hero: White BG text + Bottom Right Content */
+.hero-background-text {
+  color: rgba(255, 255, 255, 0.15) !important;
+  /* Brighter white */
+  font-size: 18vw;
+  /* Even larger */
+  top: 40%;
+  /* Adjust vertical position */
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 80px;
+  right: 5%;
+  text-align: right;
+  /* Align content to right */
+  max-width: 600px;
+  padding: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 32px;
+}
+
+.hero .cta-buttons {
+  justify-content: flex-end;
+  /* Align buttons right */
+}
+
+.hero .subtitle {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 16px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Nav: Glass Pill Style */
+.navbar {
+  top: 24px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  /* Pill shape */
+  background: rgba(255, 255, 255, 0.7);
+  /* More transparent */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  padding: 0.8rem 5%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 95%;
+    top: 16px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Features: Icons Top Right, Faded */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.feature-icon-bg {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.1;
+  transform: scale(2.5) rotate(-10deg);
+  color: var(--brand-teal);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.feature-card:hover .feature-icon-bg {
+  transform: scale(2.8) rotate(0deg);
+  opacity: 0.15;
+}
+
+/* How It Works: Large Step Numbers */
+.step-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-number-large {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0, 207, 160, 0.1);
+  margin-bottom: -20px;
+  line-height: 1;
+}
+
+.step-card h3 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Auto Carousel */
+.inner-carousel-auto {
+  display: flex;
+  width: fit-content;
+  /* Allow logic to determine width */
+  gap: 20px;
 }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../context/I18nContext'
+import { ChevronDown } from 'lucide-react'
 
 const FAQ_COUNT = 9
 
@@ -32,7 +33,9 @@ export default function FAQ() {
           <div className={`faq-item${openIndex === i ? ' open' : ''}`} key={i}>
             <button className="faq-question" onClick={() => toggle(i)}>
               <span>{item.question}</span>
-              <span className="faq-chevron">{'\u25BC'}</span>
+              <span className={`faq-chevron ${openIndex === i ? 'open' : ''}`}>
+                <ChevronDown size={20} />
+              </span>
             </button>
             <div className="faq-answer">
               <p>{item.answer}</p>
