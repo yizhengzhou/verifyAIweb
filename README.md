@@ -73,17 +73,17 @@ npm run preview
 
 | # | 區段 | 說明 |
 |---|------|------|
-| 1 | Nav | 固定導覽列，支援手機漢堡選單 |
-| 2 | Hero | 品牌主視覺，CTA 連結至 App Store |
-| 3 | Features | 約會軟體 / 社群媒體 / 商業往來 / 線上購物 |
-| 4 | How It Works | 遇到可疑照片 → 分享至 VerifyAI → 獲得報告 |
-| 5 | Technology | 反向圖片搜索 / 元數據分析 / 人臉比對 |
-| 6 | Mission | 使命宣言，說明 VerifyAI 存在的意義 |
-| 7 | Testimonials | 專家、受害者、團隊三方真實聲音 |
-| 8 | Campaign | Email 訂閱取得兌換碼 + LINE / Facebook / X 分享 |
-| 9 | FAQ | 9 題常見問題，涵蓋隱私、原理、方案差異、侷限等 |
-| 10 | CTA | 最終下載呼籲 |
-| 11 | Footer | 產品連結、隱私政策、客服信箱、© 2026 |
+| 1 | Nav | 固定導覽列，採全寬度 95% 膠囊設計，內容極致靠邊對齊 |
+| 2 | Hero | 品牌主視覺，採全螢幕綠色漸變底色，標題支援淡入縮放動畫 |
+| 3 | Features | 4 個主要應用場景卡片，支援 Hover 動態縮放與圖標背景 |
+| 4 | How It Works | 3 步驟流程展示，整合 App 截圖輪播（支援箭頭、指示點、滑動導航） |
+| 5 | Technology | 3 核心技術點，強調隱私與 AI 分析性能 |
+| 6 | Mission | 使命宣言，採深色背景與動態漸變邊框設計 |
+| 7 | Testimonials | 3 則真實證言，展示產品多維度價值 |
+| 8 | Campaign | Email 預約機制 + 多平台社群分享功能 |
+| 9 | FAQ | 9 題常見問題，採手風琴式收納佈局 |
+| 10 | CTA | 底部行動呼籲，引導至 App Store |
+| 11 | Footer | 完整的法律條款、隱私政策與團隊聯繫資訊 |
 
 ## 品牌指南
 
@@ -143,8 +143,9 @@ function MyComponent() {
 - [ ] Campaign 區段：整合 Mailchimp / Brevo API（目前為模擬模式）
 - [ ] Apple Promo Code 兌換機制
 - [ ] 確認正式網域後更新 canonical URL / og:url
-- [ ] 新增 App 截圖輪播至 Hero 區段
-
+- [x] 新增 App 截圖輪播至 Hero / How It Works 區段（已完成：支援三模式導航）
+- [x] 優化首頁視覺動效（已完成：Hero 背景大字動畫與漸變恢復）
+- [x] 導覽列排版調整（已完成：全寬度膠囊與邊界極大化）
 ## 聯絡方式
 
 - **客服信箱**: verifyai.image.search@gmail.com
