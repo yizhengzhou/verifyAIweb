@@ -11,7 +11,7 @@ export default function Technology() {
   const { t } = useI18n()
 
   return (
-    <section id="technology" className="section">
+    <section id="technology" className="section-green">
       <div className="section-header">
         <span className="section-label">{t('technology.label')}</span>
         <h2 className="section-title">{t('technology.title')}</h2>

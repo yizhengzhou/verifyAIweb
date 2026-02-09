@@ -16,7 +16,7 @@ export default function Features() {
   // New "Self Verification" item added
 
   return (
-    <section id="features" className="section">
+    <section id="features" className="section-dark">
       <div className="section-header">
         <h2
           className="section-title"

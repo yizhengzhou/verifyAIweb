@@ -71,7 +71,7 @@
     "description": "Precise technology ensuring highest accuracy",
     "reverseSearch": {
       "title": "Reverse Image Search",
-      "description": "Track photo origin and usage history"
+      "description": "Combines multiple search engines for comprehensive coverage, traces photo origins and usage history, checks if social media images are stolen"
     },
     "metadata": {
       "title": "Metadata Analysis",
@@ -85,9 +85,25 @@
   "mission": {
     "label": "Our Mission",
     "title": "Why We Do This",
-    "description": "Driven by genuine social concern, providing effective tools for those at risk",
-    "quote": "Tracing a photo's origin and revealing that the person behind the image is someone else entirely is the most effective way to help someone realize the truth.",
-    "body": "We believe that when a person can see the evidence with their own eyes — discovering that the photo they were sent actually belongs to someone else — that moment of realization is more powerful than any amount of persuasion. VerifyAI exists to make that step easy for everyone."
+    "intro": "The simple reason we launched this app is because scams are rampant worldwide, and among them, the most despicable type exploits human kindness and emotional vulnerabilities — 'romance scams.'",
+    "valuesTitle": "Our Core Values:",
+    "value1": {
+      "title": "Bridging the Digital Divide",
+      "description": "With simple 'reverse image search,' you can discover that the 'selfie' sent by the other person actually belongs to someone else, preventing the victim from falling into the trap."
+    },
+    "value2": {
+      "title": "The Most Awakening Tool for Victims",
+      "description": "'Intellectually, they know it's a scam, but emotionally, they can't accept the person doesn't exist until they find the photo's real owner'",
+      "citation": "—Whitty, M. T., & Buchanan, T. (2016). The online dating romance scam."
+    },
+    "value3": {
+      "title": "100% Confirmation Rate",
+      "description": "Current AI-generated image detection technology still has uncertainties and cannot achieve complete confirmation, thus lacking the effect of 'awakening' victims. We use pHash image fingerprint technology to achieve 100% verification."
+    },
+    "value4": {
+      "title": "The Only Resource in Isolation",
+      "description": "Most research shows that those falling victim to romance scams first enter a state of isolation (possibly deliberately guided by the scammer), so an app on a phone may be their only discussion partner."
+    }
   },
   "testimonials": {
     "label": "Real Voices",
@@ -123,7 +139,8 @@
       "description": "Help more people stay safe from online scams",
       "message": "VerifyAI - Deep reverse image search to protect your online safety",
       "copy": "Copy Link",
-      "copied": "Copied to clipboard!"
+      "copied": "Copied to clipboard!",
+      "goToApp": "Go to VerifyAI"
     }
   },
   "faq": {

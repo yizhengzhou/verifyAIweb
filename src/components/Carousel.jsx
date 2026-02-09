@@ -1,13 +1,8 @@
 import { useRef, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useAnimation, useMotionValue } from 'framer-motion'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useI18n } from '../context/I18nContext'
 
-// Mapping languages to asset folder names if they differ, 
-// or just assuming standard structure: /assets/{lang}/{lang}_{index}.jpg
-// Based on file listing: assets/zh-TW/zh-TW_1.jpg
-// We'll need to handle 'en' -> 'EN' or similar case sensitivity if strictly needed, 
-// but usually file systems on Mac are case insensitive (though not always). 
-// Let's assume the folder names match the lang codes or map them.
 const LANG_MAP = {
     'zh-TW': 'zh-TW',
     'en': 'EN',
@@ -16,64 +11,131 @@ const LANG_MAP = {
 }
 
 const CAROUSEL_IMAGES = [1, 2, 3, 4, 5]
+const DRAG_THRESHOLD = 50
 
 export default function Carousel() {
     const { lang } = useI18n()
-    const [width, setWidth] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [autoScrollComplete, setAutoScrollComplete] = useState(false)
     const carousel = useRef()
 
+    // Auto-scroll effect on mount
     useEffect(() => {
-        // Calculate scrollable width
-        if (carousel.current) {
-            setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+        if (!autoScrollComplete) {
+            const timer = setTimeout(() => {
+                let index = 0
+                const interval = setInterval(() => {
+                    index++
+                    setCurrentIndex(index)
+                    if (index >= CAROUSEL_IMAGES.length - 1) {
+                        clearInterval(interval)
+                        setAutoScrollComplete(true)
+                    }
+                }, 4000) // Increased to 4 seconds for better viewing
+
+                return () => clearInterval(interval)
+            }, 1000)
+
+            return () => clearTimeout(timer)
         }
-    }, [])
+    }, [autoScrollComplete])
 
-    // Determine folder name
+    // Navigate to specific index
+    const goToSlide = (index) => {
+        setCurrentIndex(index)
+    }
+
+    const goToPrevious = () => {
+        setCurrentIndex((prev) => (prev === 0 ? CAROUSEL_IMAGES.length - 1 : prev - 1))
+    }
+
+    const goToNext = () => {
+        setCurrentIndex((prev) => (prev === CAROUSEL_IMAGES.length - 1 ? 0 : prev + 1))
+    }
+
+    // Handle drag end to snap to slides
+    const onDragEnd = (event, info) => {
+        const offset = info.offset.x
+        if (Math.abs(offset) > DRAG_THRESHOLD) {
+            if (offset > 0) {
+                goToPrevious()
+            } else {
+                goToNext()
+            }
+        }
+    }
+
     const folder = LANG_MAP[lang] || 'EN'
-
-    // Construct image paths
-    // Note: specific pathing depends on how Vite serves public assets. 
-    // If assets is in root, it might need to be moved to public/ or imported.
-    // The user says "assets資料夾有app使用說明視覺卡片", but in Vite, 
-    // static assets usually go in `public/` to be referenced by string URL, 
-    // or `src/assets` to be imported. 
-    // The file list showed `assets` at the root, which might be outside `public`?
-    // Let's check `vite.config.js` or `index.html` references. 
-    // Wait, the file list showed `public` AND `assets` at root. 
-    // If `assets` is at root, it's not served by default in Vite unless configured. 
-    // However, usually people put them in `public` or `src/assets`.
-    // If it's a raw folder at root, we might not be able to link to it directly like `/assets/...` 
-    // unless we move it or configure alias.
-    // I will check if I should move them to `public/assets` or if they interpret `assets` as `public/assets`.
-    // Let's assume for now I might need to move them to `public/images` or similar.
-    // Actually, I should probably check if I can move them.
-    // For now I will code the component to point to `/assets/${folder}/${folder}_${i}.jpg` 
-    // and I will perform a move operation if needed in the next step.
 
     return (
         <div className="carousel-wrapper">
-            <motion.div
-                ref={carousel}
-                className="carousel"
-                whileTap={{ cursor: "grabbing" }}
-            >
-                <motion.div
-                    drag="x"
-                    dragConstraints={{ right: 0, left: -width }}
-                    className="inner-carousel"
+            <div className="carousel-container">
+                {/* Left Arrow */}
+                <button
+                    className="carousel-arrow carousel-arrow-left"
+                    onClick={() => {
+                        goToPrevious()
+                        setAutoScrollComplete(true) // User interaction stops auto-scroll
+                    }}
+                    aria-label="Previous screenshot"
                 >
-                    {CAROUSEL_IMAGES.map((i) => (
-                        <motion.div className="carousel-item" key={i}>
-                            <img
-                                src={`/assets/${folder}/${folder}_${i}.jpg`}
-                                alt={`App usage screen ${i}`}
-                                pointerEvents="none"
-                            />
-                        </motion.div>
-                    ))}
-                </motion.div>
-            </motion.div>
+                    <ChevronLeft size={32} />
+                </button>
+
+                {/* Carousel Images - Now with Drag support */}
+                <div className="carousel" ref={carousel}>
+                    <motion.div
+                        className="inner-carousel"
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        onDragEnd={onDragEnd}
+                        animate={{ x: -currentIndex * 320 }} // 300px width + 20px gap
+                        transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                        whileTap={{ cursor: "grabbing" }}
+                        style={{ cursor: "grab" }}
+                    >
+                        {CAROUSEL_IMAGES.map((i) => (
+                            <motion.div
+                                className="carousel-item"
+                                key={i}
+                            >
+                                <img
+                                    src={`/assets/${folder}/${folder}_${i}.jpg`}
+                                    alt={`App usage screen ${i}`}
+                                    draggable="false"
+                                />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+
+                {/* Right Arrow */}
+                <button
+                    className="carousel-arrow carousel-arrow-right"
+                    onClick={() => {
+                        goToNext()
+                        setAutoScrollComplete(true) // User interaction stops auto-scroll
+                    }}
+                    aria-label="Next screenshot"
+                >
+                    <ChevronRight size={32} />
+                </button>
+            </div>
+
+            {/* Dot Indicators */}
+            <div className="carousel-dots">
+                {CAROUSEL_IMAGES.map((_, index) => (
+                    <button
+                        key={index}
+                        className={`carousel-dot ${index === currentIndex ? 'active' : ''}`}
+                        onClick={() => {
+                            goToSlide(index)
+                            setAutoScrollComplete(true)
+                        }}
+                        aria-label={`Go to screenshot ${index + 1}`}
+                    />
+                ))}
+            </div>
         </div>
     )
 }

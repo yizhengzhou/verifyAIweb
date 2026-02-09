@@ -18,23 +18,6 @@ export default function Campaign() {
     setEmail('')
   }
 
-  function shareOnLine() {
-    const text = encodeURIComponent(t('campaign.share.message') || 'Check out VerifyAI')
-    const url = encodeURIComponent(SHARE_URL)
-    window.open(`https://social-plugins.line.me/lineit/share?url=${url}&text=${text}`, '_blank', 'noopener')
-  }
-
-  function shareOnFacebook() {
-    const url = encodeURIComponent(SHARE_URL)
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'noopener')
-  }
-
-  function shareOnX() {
-    const text = encodeURIComponent(t('campaign.share.message') || 'Check out VerifyAI')
-    const url = encodeURIComponent(SHARE_URL)
-    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank', 'noopener')
-  }
-
   function copyLink() {
     navigator.clipboard.writeText(SHARE_URL).then(() => {
       setCopied(true)
@@ -42,11 +25,14 @@ export default function Campaign() {
     })
   }
 
+  function goToApp() {
+    window.open(SHARE_URL, '_blank', 'noopener')
+  }
+
   return (
     <section id="campaign" className="campaign">
       <div className="campaign-inner">
         <div className="section-header">
-          <span className="section-label">{t('campaign.label')}</span>
           <h2 className="section-title">{t('campaign.title')}</h2>
           <p className="section-description">{t('campaign.description')}</p>
         </div>
@@ -76,9 +62,9 @@ export default function Campaign() {
             <h3>{t('campaign.share.title')}</h3>
             <p className="share-desc">{t('campaign.share.description')}</p>
             <div className="share-buttons">
-              <button className="share-btn line" onClick={shareOnLine}>LINE</button>
-              <button className="share-btn facebook" onClick={shareOnFacebook}>Facebook</button>
-              <button className="share-btn x" onClick={shareOnX}>X</button>
+              <button className="share-btn app-store" onClick={goToApp}>
+                {t('campaign.share.goToApp') || '立即前往 VerifyAI'}
+              </button>
               <button className="share-btn copy" onClick={copyLink}>
                 {t('campaign.share.copy')}
               </button>
