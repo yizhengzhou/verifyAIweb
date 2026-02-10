@@ -189,20 +189,40 @@ p {
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    z-index: 1001;
   }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
+    top: 100px;
+    /* Floating below navbar */
+    left: 5%;
+    right: 5%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
     flex-direction: column;
-    padding: 1.5rem 5%;
+    padding: 1.5rem;
+    /* Compact padding */
     gap: 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    z-index: 1000;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
   .nav-links.open {
@@ -210,8 +230,12 @@ p {
   }
 
   .lang-switcher {
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    justify-content: space-around;
   }
 }
 
@@ -1152,14 +1176,89 @@ p {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .carousel-arrow {
-    width: 40px;
-    height: 40px;
+  :root {
+    --section-padding: 40px 5%;
+    /* Condensed vertical space */
   }
 
-  .carousel-arrow svg {
-    width: 24px;
-    height: 24px;
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns to save space */
+    gap: 12px;
+  }
+
+  .feature-card {
+    padding: 20px 12px;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon-bg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+  }
+
+  .feature-icon-bg svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero {
+    padding: 100px 5% 40px;
+    /* Tighter hero */
+  }
+
+  .hero-big-text {
+    font-size: clamp(4rem, 12vw, 5.5rem);
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+
+  .hero-long-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+    top: auto;
+    bottom: -60px;
+    /* Move arrows below the carousel on mobile */
+    transform: none;
+  }
+
+  .carousel-arrow-left {
+    left: 20%;
+  }
+
+  .carousel-arrow-right {
+    right: 20%;
+  }
+
+  .carousel-dots {
+    margin-top: 20px;
+  }
+
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    /* Larger tap targets */
+    margin: 0 8px;
+  }
+
+  .carousel-wrapper {
+    margin-bottom: 80px;
+    /* Space for arrows below */
   }
 }
 

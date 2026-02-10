@@ -1,15 +1,42 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useI18n } from '../context/I18nContext'
 import { Menu, X } from 'lucide-react'
 
 export default function Navbar() {
   const { t, lang, changeLanguage, supportedLanguages } = useI18n()
   const [menuOpen, setMenuOpen] = useState(false)
+  const navRef = useRef(null)
 
   const langLabels = { 'zh-TW': '繁中', en: 'EN', ja: '日本語', ko: '한국어' }
 
+  // Close menu on outside click
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    document.addEventListener('touchstart', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [])
+
+  // Close menu on scroll
+  useEffect(() => {
+    function handleScroll() {
+      if (menuOpen) {
+        setMenuOpen(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [menuOpen])
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" ref={navRef}>
       <div className="container">
         <a href="/" className="logo-link">
           <img src="/logov2.png" alt="VerifyAI logo" width="40" height="40" />
