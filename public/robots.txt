@@ -5,3 +5,8 @@ Disallow: /deployment/
 Disallow: /.git/
 
 Sitemap: https://verifyai01.pages.dev/sitemap.xml
+
+# This site supports Cloudflare Markdown for Agents.
+# AI agents can request Markdown content by setting the header:
+#   Accept: text/markdown
+# Cloudflare will automatically convert HTML to Markdown on the fly.
