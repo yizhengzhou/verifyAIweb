@@ -203,7 +203,8 @@
     },
     "legal": {
       "title": "Legal",
-      "privacy": "Privacy Policy"
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     },
     "contact": {
       "title": "Contact Us",
@@ -219,5 +220,200 @@
       "error": "Subscription failed. Please try again or email us."
     },
     "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
+  },
+  "termsOfService": {
+    "pageTitle": "Terms of Service",
+    "metaDescription": "VerifyAI Terms of Service - Complete terms and conditions for using the VerifyAI image search service",
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated: April 29, 2026",
+    "backToHome": "Back to Home",
+    "intro": "Welcome to VerifyAI (\"the Service\" or \"the App\"). These Terms of Service (\"Terms\") govern your use of the VerifyAI mobile application and related services. By using the Service, you agree to be bound by these Terms. If you do not agree with any part of these Terms, please do not use the Service.",
+    "contactText": "If you have any questions about these Terms of Service, please contact us at:",
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "paragraphs": [
+          "By using VerifyAI's services, you acknowledge that you have read, understood, and agree to be bound by these Terms. We may revise these Terms from time to time, and the revised Terms will be effective immediately upon posting. Your continued use of the Service constitutes your agreement to be bound by the revised Terms."
+        ]
+      },
+      {
+        "title": "Service Description",
+        "paragraphs": [
+          "VerifyAI is an AI-powered reverse image search application that provides the following services:",
+          "Search results are for reference only and do not constitute legal advice or factual determination."
+        ],
+        "items": [
+          "Reverse Image Search: Trace photo origins through multiple search engines (Google, Google Lens, Yandex, Shutterstock, etc.)",
+          "Risk Assessment Reports: Provide risk assessment analysis based on search results",
+          "Photo Verification: Help users determine the authenticity and origin of online photos"
+        ]
+      },
+      {
+        "title": "User Eligibility",
+        "paragraphs": [
+          "You must be at least 13 years of age to use this Service. If you are a minor, you should use this Service with the consent of your legal guardian. By using this Service, you represent and warrant that you meet the above eligibility requirements."
+        ]
+      },
+      {
+        "title": "Account and Access",
+        "paragraphs": [
+          "The Service is available for download through the Apple App Store. You need a valid Apple ID to download and use the App. You are responsible for maintaining the security of your account and for all activities that occur through your account."
+        ]
+      },
+      {
+        "title": "Acceptable Use Policy",
+        "paragraphs": [
+          "When using the Service, you agree not to:"
+        ],
+        "items": [
+          "Use the Service for any illegal purpose or in violation of any applicable laws",
+          "Upload or analyze images containing child sexual abuse material",
+          "Use the Service to stalk, harass, or threaten others",
+          "Attempt to decompile, disassemble, or otherwise reverse engineer the Service's source code",
+          "Circumvent or attempt to circumvent any technical protection measures of the Service",
+          "Use automated tools to mass access or scrape the Service",
+          "Use the Service's search results for purposes of discrimination, defamation, or invasion of privacy"
+        ]
+      },
+      {
+        "title": "Intellectual Property",
+        "paragraphs": [
+          "VerifyAI and all its content, features, and interfaces are the property of the Company or its licensors, protected by copyright, trademark, and other intellectual property laws. These Terms do not grant you any rights to use the Service's trademarks, logos, or brand names."
+        ]
+      },
+      {
+        "title": "Subscriptions and Payments",
+        "paragraphs": [
+          "The Service offers a free version and a Pro subscription. Pro subscriptions are processed through the Apple App Store.",
+          "Subscriptions will automatically renew unless you turn off auto-renewal at least 24 hours before the end of the current subscription period. Subscription management and cancellation should be done through Apple App Store settings. Refund policies are governed by Apple's terms."
+        ]
+      },
+      {
+        "title": "User Content",
+        "paragraphs": [
+          "Images you upload to the Service are used solely to provide search analysis services and are immediately deleted after analysis is complete. We do not store, archive, or back up any images you upload.",
+          "You represent and warrant that you have the legal right to use the images you upload and that your use does not infringe the rights of any third party."
+        ]
+      },
+      {
+        "title": "Disclaimer of Warranties",
+        "paragraphs": [
+          "The Service is provided on an \"AS IS\" and \"AS AVAILABLE\" basis. We do not guarantee the accuracy, completeness, or timeliness of search results. Search results are for reference only and should not be used as the sole basis for any legal action or personal decision.",
+          "To the maximum extent permitted by law, we expressly disclaim all warranties, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement."
+        ]
+      },
+      {
+        "title": "Limitation of Liability",
+        "paragraphs": [
+          "To the maximum extent permitted by law, the Company and its affiliates, licensors, or service providers shall not be liable for any indirect, incidental, special, punitive, or consequential damages arising from the use or inability to use the Service.",
+          "Our maximum aggregate liability shall not exceed the total amount you paid to us in the 12 months prior to the date of the claim."
+        ]
+      },
+      {
+        "title": "Service Modifications and Termination",
+        "paragraphs": [
+          "We reserve the right to modify, suspend, or discontinue the Service (in whole or in part) at any time without notice. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Service."
+        ]
+      },
+      {
+        "title": "Governing Law",
+        "paragraphs": [
+          "These Terms shall be governed by and construed in accordance with the laws of the Republic of China (Taiwan). Any disputes arising from these Terms shall be subject to the jurisdiction of the Taipei District Court, Taiwan as the court of first instance."
+        ]
+      },
+      {
+        "title": "Contact Information",
+        "paragraphs": [
+          "If you have any questions or comments about these Terms of Service, please contact us at:",
+          "Email: yizheng@fork.work"
+        ]
+      }
+    ]
+  },
+  "privacyPolicy": {
+    "pageTitle": "Privacy Policy",
+    "metaDescription": "VerifyAI Privacy Policy - Learn how we handle and protect your personal information",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated: April 29, 2026",
+    "backToHome": "Back to Home",
+    "intro": "Welcome to VerifyAI (\"the App\"). We are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our services.",
+    "contactText": "If you have any questions about this Privacy Policy, please contact us at:",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "subsections": [
+          {
+            "subtitle": "Information You Provide Directly",
+            "items": [
+              "Photos or Videos: Images you actively upload for analysis. This is central to our service."
+            ]
+          },
+          {
+            "subtitle": "Information We Collect Automatically",
+            "items": [
+              "User ID: An anonymous, randomly generated identifier used to manage your purchases and restore them, which is not linked to your real identity.",
+              "Purchases: Your purchase history within the App, used to verify your subscription status and unlock corresponding Pro features.",
+              "Product Interaction: Anonymous usage data, such as button clicks and feature usage, to help us understand how the App is used and improve it.",
+              "Diagnostics: Includes anonymous crash logs and performance data (e.g., launch times, error rates) used to maintain App stability and fix technical issues."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "How We Use Your Information",
+        "items": [
+          "Photos or Videos: Solely to provide the core image analysis service. We delete them immediately after analysis.",
+          "User ID and Purchases: To verify your payment status, unlock Pro features, and allow you to restore purchases on new devices or after reinstallation.",
+          "Product Interaction and Diagnostics: To monitor App stability, fix bugs, optimize performance, and understand how to improve the overall user experience."
+        ]
+      },
+      {
+        "title": "Information Sharing and Third-Party Services",
+        "paragraphs": [
+          "We do not share your personal information with unrelated third parties. However, to fulfill the App's core functionality, we must transmit your data to the following third-party partners:"
+        ],
+        "items": [
+          "Apple: For processing all in-App Purchases (subscriptions, consumables) and receipt validation. We do not have access to your payment information.",
+          "RevenueCat: We use RevenueCat as our subscription and purchase management platform to help manage in-app purchases, validate receipts, track subscription status, and enable cross-platform purchase restoration.",
+          "Google (Cloud Vision API): Used for face detection and web image matching.",
+          "SerpAPI: Acts as a search proxy, forwarding images to Google Lens and Yandex for reverse image search.",
+          "Shutterstock: Used to confirm if an image originates from its commercial stock photo library.",
+          "ImgBB / tmpfiles.org: We temporarily upload images to these services so that certain analysis engines can access them via a URL.",
+          "Analytics and Diagnostics Services (e.g., Firebase, Sentry): We may share anonymous product interaction and diagnostic data with these services."
+        ]
+      },
+      {
+        "title": "Data Retention",
+        "paragraphs": [
+          "We operate on a \"use-and-discard\" principle. Images you upload are only temporarily stored on our servers for the brief duration of the analysis task. Immediately after the analysis is complete, the original image data is permanently deleted. We never store, archive, or back up any of your original images.",
+          "Anonymous user IDs, purchase records, and diagnostic data may be retained for as long as necessary to maintain App functionality (e.g., purchase restoration) and for service improvement."
+        ]
+      },
+      {
+        "title": "Security",
+        "paragraphs": [
+          "We implement commercially reasonable technical and administrative measures to protect your information. However, please understand that no internet transmission or electronic storage method is 100% secure, and we cannot guarantee absolute security."
+        ]
+      },
+      {
+        "title": "Children's Privacy",
+        "paragraphs": [
+          "This App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we may have collected information from a child, please contact us immediately, and we will delete the relevant information as soon as possible."
+        ]
+      },
+      {
+        "title": "Changes to This Privacy Policy",
+        "paragraphs": [
+          "We may update this Privacy Policy from time to time. We will notify you of any significant changes within the App. We encourage you to review this policy periodically for the latest information."
+        ]
+      },
+      {
+        "title": "Contact Us",
+        "paragraphs": [
+          "If you have any questions about this Privacy Policy, please contact us at:",
+          "Email: yizheng@fork.work"
+        ]
+      }
+    ]
   }
 }

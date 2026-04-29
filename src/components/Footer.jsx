@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useI18n } from '../context/I18nContext'
 import Newsletter from './Newsletter'
 
@@ -36,9 +37,14 @@ export default function Footer() {
           <h3>{t('footer.legal.title')}</h3>
           <ul>
             <li>
-              <a href="https://yizhengzhou.github.io/verifyai-legal" target="_blank" rel="noopener noreferrer">
+              <Link to="/privacy">
                 {t('footer.legal.privacy')}
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms">
+                {t('footer.legal.terms')}
+              </Link>
             </li>
           </ul>
         </div>

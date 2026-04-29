@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import { useI18n } from './context/I18nContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -10,12 +11,10 @@ import Campaign from './components/Campaign'
 import FAQ from './components/FAQ'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import TermsOfService from './components/legal/TermsOfService'
+import PrivacyPolicy from './components/legal/PrivacyPolicy'
 
-export default function App() {
-  const { ready } = useI18n()
-
-  if (!ready) return null
-
+function HomePage() {
   return (
     <>
       <Navbar />
@@ -30,5 +29,19 @@ export default function App() {
       <CTA />
       <Footer />
     </>
+  )
+}
+
+export default function App() {
+  const { ready } = useI18n()
+
+  if (!ready) return null
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/terms" element={<TermsOfService />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
+    </Routes>
   )
 }
