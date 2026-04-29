@@ -209,6 +209,15 @@
       "title": "お問い合わせ",
       "email": "カスタマーサポート："
     },
-    "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
+    "newsletter": {
+      "title": "ニュースレター",
+      "hint": "VerifyAI の最新情報と詐欺対策の知識を月1回お届けします。いつでも配信停止可能。",
+      "placeholder": "メールアドレス",
+      "button": "登録",
+      "submitting": "送信中…",
+      "success": "ご登録ありがとうございます。",
+      "error": "登録に失敗しました。後ほどお試しください。"
+    },
+    "copyright": "© 2026 VerifyAI. All rights reserved."
   }
 }
