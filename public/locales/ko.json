@@ -209,6 +209,15 @@
       "title": "문의하기",
       "email": "고객지원:"
     },
-    "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
+    "newsletter": {
+      "title": "뉴스레터 구독",
+      "hint": "VerifyAI 업데이트와 사기 방지 팁을 매월 한 번 받아보세요. 언제든지 구독 취소 가능합니다.",
+      "placeholder": "이메일 주소",
+      "button": "구독",
+      "submitting": "처리 중…",
+      "success": "구독해 주셔서 감사합니다.",
+      "error": "구독에 실패했습니다. 다시 시도하거나 이메일로 문의해 주세요."
+    },
+    "copyright": "© 2026 VerifyAI. All rights reserved."
   }
 }

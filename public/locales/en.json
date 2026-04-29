@@ -209,6 +209,15 @@
       "title": "Contact Us",
       "email": "Customer Support:"
     },
+    "newsletter": {
+      "title": "Stay Updated",
+      "hint": "Get VerifyAI updates and online-scam awareness tips. Monthly. Unsubscribe anytime.",
+      "placeholder": "Your email",
+      "button": "Subscribe",
+      "submitting": "Subscribing\u2026",
+      "success": "Thanks for subscribing! We'll be in touch.",
+      "error": "Subscription failed. Please try again or email us."
+    },
     "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
   }
 }
