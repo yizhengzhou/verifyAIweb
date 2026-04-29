@@ -13,6 +13,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import TermsOfService from './components/legal/TermsOfService'
 import PrivacyPolicy from './components/legal/PrivacyPolicy'
+import ScrollToTop from './components/ScrollToTop'
 
 function HomePage() {
   return (
@@ -38,10 +39,13 @@ export default function App() {
   if (!ready) return null
 
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/terms" element={<TermsOfService />} />
-      <Route path="/privacy" element={<PrivacyPolicy />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+    </>
   )
 }
