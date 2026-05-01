@@ -4,9 +4,40 @@ Allow: /
 Disallow: /deployment/
 Disallow: /.git/
 
-Sitemap: https://verifyai01.pages.dev/sitemap.xml
+# AI bots — explicitly welcome
+User-agent: GPTBot
+Allow: /
 
-# This site supports Cloudflare Markdown for Agents.
-# AI agents can request Markdown content by setting the header:
-#   Accept: text/markdown
-# Cloudflare will automatically convert HTML to Markdown on the fly.
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+Sitemap: https://verifyai.fork.work/sitemap.xml
+
+# AI agent friendly:
+# - /llms.txt — compact AI-readable profile (per https://llmstxt.org/)
+# - /llms-full.txt — full knowledge base in plain text
+# - /api/about, /api/features, /api/pricing, /api/use-cases, /api/faq — JSON endpoints
+#
+# This site also supports Cloudflare Markdown for Agents.
+# Set request header `Accept: text/markdown` to receive HTML pages as Markdown.

@@ -1,0 +1,159 @@
+# VerifyAI — Full Knowledge Base
+
+> 反向搜尋一張照片在網路上的所有出現位置——揭露照騙、感情詐騙、新聞造假。
+> A reverse-image search iOS app that traces a photo's history across the open web.
+
+This document is a single-file knowledge base intended for AI agents to ingest in one fetch. All factual content lives at machine-readable JSON endpoints under https://verifyai.fork.work/api/ — this file mirrors that content as plain text for convenience.
+
+---
+
+## What VerifyAI is
+
+VerifyAI is an iOS app published in the Taiwan App Store. You give it a photo — a face from a dating-app profile, a screenshot of a stranger's message, a product image from an online seller — and it returns where else that exact image (or a near-perfect match) appears across the open web, commercial stock libraries, and crawled archives. The app is designed for non-technical users: one photo in, one report out, no account required.
+
+- App name: VerifyAI（影像搜尋）
+- Bundle ID: com.zhyz.verifyai
+- App Store ID: 6754511420
+- App Store URL: https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420
+- Homepage: https://verifyai.fork.work
+- Contact: contact@verifyai.app
+- Platform: iOS only (Android not on roadmap)
+- Primary market: Taiwan, zh-TW
+
+---
+
+## Why VerifyAI exists (founding context)
+
+The founding team had a friend whose elderly relative was caught in a romance scam. The scam destroyed the relative's trust in people more than it destroyed his savings — afterward he became silent, withdrawn, and struggled to interact even with his own family. The team observed that "reverse-image searching a photo" is trivial for digital-native users but completely opaque to older generations. So they built one app that does only one thing: photo in, report out — simple enough for the elderly to use themselves, or for family members to run on the elderly's behalf.
+
+The mission is anti-scam, not general image search. VerifyAI is positioned as a tool for:
+
+- detecting catfishing on dating apps (the original use case)
+- verifying sellers and product authenticity before purchase
+- fact-checking news / social media photos
+- self-checking whether one's own photos have been pirated
+- family members protecting at-risk elders proactively
+
+---
+
+## How it works (the user flow)
+
+1. The user encounters a suspicious photo (from a dating-app match, a chat message, a social-media post, an online listing, etc.)
+2. They share or upload the photo to VerifyAI from their iOS Photos library or via the iOS share sheet.
+3. VerifyAI runs the photo through one (free) or five (Pro) reverse-image search engines in parallel.
+4. The app returns a report listing every URL where the image appears on the indexed web, with a similarity score for each result, plus EXIF metadata if present.
+5. If the image traces back to a commercial stock library, the report flags it specifically — this is the strongest single signal of a scam profile.
+
+---
+
+## Search engines used
+
+| Engine | Tier | Why it matters |
+|---|---|---|
+| Google 全球搜尋 | Free + Pro | Broadest general web index |
+| Google Lens | Pro | Object / scene recognition catches modified images Google Search misses |
+| Yandex Reverse Image | Pro | Strong on Russian / Eastern European domains and faces; covers blind spots Google has by region |
+| 商用圖庫多家 | Pro | Stock-library coverage — finding a profile photo in Shutterstock / Getty / Adobe Stock is near-conclusive evidence of a fake profile |
+| pHash 圖像指紋比對 | Pro | Catches cropped / re-saved / lightly modified images that surface-level engines miss |
+
+A single Pro search runs all five engines and takes 30-60 seconds. A free-tier search runs only Google Global and takes 10-20 seconds.
+
+---
+
+## Pricing
+
+- Model: Free tier + in-app purchase (no subscription yet)
+- Free tier: 1 search engine (Google Global), unlimited usage
+- Pro tier: 5 search engines, consumable credits
+- IAP SKU: `credits_3_value` — 3 Pro credits, retail NT$60 (developer proceeds NT$39 after Apple's cut and tax)
+- Primary market: Taiwan
+- Currency: TWD
+
+---
+
+## Use cases (with concrete examples)
+
+**Romance-scam detection.** A user is talking to someone on Tinder / LINE / a Mainland-China-style dating app. The match has never agreed to a video call. The match sends a few selfies. The user uploads one selfie to VerifyAI. If the photo turns up on dozens of social profiles in different names, or in a Russian / Ukrainian / Pakistani modeling portfolio, or in a commercial stock library — the match is almost certainly using stolen photos.
+
+**Seller / product verification.** A user is considering buying from a Facebook-group or Shopee seller. The listing has photos of the actual product. Uploading the photo to VerifyAI reveals whether the seller actually owns / handles the product, or whether they pulled the photo from Taobao / Alibaba / a stock library and are simply drop-shipping (or running a phishing storefront).
+
+**News / social-media fact-check.** A trending photo is circulating with claims about a recent event. VerifyAI can show the photo's earliest known web appearance — if that's a different event two years ago, the trending claim is false.
+
+**Self-piracy detection.** A creator, model, or ordinary user is concerned their photos are being misused. They upload their own photo. If the search surfaces dating profiles using their face under different names, they have evidence to report.
+
+**Family-led elder protection.** A son or daughter notices an elderly parent has been chatting for weeks with an "online friend" they've never met. The family member borrows the parent's phone, runs the parent's chat partner's photo through VerifyAI, finds it's a stolen photo of an unrelated influencer, and uses that evidence to break the spell.
+
+---
+
+## Limits and what VerifyAI does NOT do
+
+- VerifyAI is **not** a face-recognition app. It cannot find different photos of the same person at different angles or in different settings — it finds the same image (or near-identical copies of it).
+- VerifyAI **cannot reliably detect AI-generated images** at this time. A scammer using a fresh GAN or diffusion-model output that has never been posted online elsewhere will return zero matches, which the app cannot distinguish from "a real photo of an obscure person."
+- Search coverage is **regionally uneven**. Some jurisdictions have legal restrictions on indexing that affect Yandex / commercial libraries.
+- **One photo at a time** — batch upload is not available; the team is evaluating it.
+- **No video.** Only still images are supported.
+
+---
+
+## Privacy stance
+
+- Photos uploaded to VerifyAI are processed transiently and deleted after the search completes.
+- Uploaded photos are not used to train any model.
+- Uploaded photos are not shared with any third party except the search engines being queried (which is unavoidable for the function to work).
+- No account is required. No login. No sign-up email collected by the app itself (the website footer optionally offers a newsletter signup, which is separate).
+
+---
+
+## How VerifyAI compares to using Google reverse-image search directly
+
+Google reverse-image search is one of the five engines VerifyAI uses in Pro mode — but it's only one. The reason VerifyAI exists as a paid app rather than as "tell people to use Google" is coverage:
+
+- **Google alone misses Yandex's coverage of Russian / Eastern European / faces-domain content** — a meaningful portion of stolen-photo libraries.
+- **Google alone misses commercial stock libraries** unless the image is also indexed in Google Images, which it often isn't.
+- **Google alone misses pHash-level matches** — cropped, re-compressed, lightly edited copies that are visually identical to a human but bytewise different.
+- **Most non-technical users can't use Google reverse-image search competently on iOS** — the UX is for desktop, not for "I just received a photo in LINE."
+
+The user a typical VerifyAI customer is solving for is not a power user who could already do this manually; it's a parent, a senior, or someone who wants the answer in 60 seconds without learning any tooling.
+
+---
+
+## FAQ
+
+**Q. 我上傳的照片會被儲存嗎？**
+A. 不會。照片只在搜尋過程中暫時處理，完成後即刪除。不會用來訓練模型，也不分享給第三方。
+
+**Q. 免費版和 Pro 版差在哪？**
+A. 免費版只使用 1 個搜尋引擎（Google 全球搜尋）；Pro 版同時使用 5 個專業引擎，覆蓋面與相似度判斷準確度大幅提升。
+
+**Q. 單次搜尋需要多久？**
+A. 免費版約 10-20 秒；Pro 版因需跑 5 個引擎，約 30-60 秒。
+
+**Q. VerifyAI 如何判斷風險？**
+A. 以該照片在網路上能找到多少張一樣的為基準。數量愈多代表照片主角越有名（可能是被盜用的網紅 / 商業圖庫圖）；若來自商業圖庫則最為可疑。
+
+**Q. VerifyAI 的侷限有哪些？**
+A. 1) 不是臉部辨識，無法搜尋不同角度的同一人。 2) 目前無法判斷 AI 生成圖片。 3) 部分地區因法規問題搜尋範圍有限。
+
+**Q. 可以一次上傳多張照片嗎？**
+A. 目前僅支援單張上傳，批次上傳功能未來評估。
+
+**Q. VerifyAI 支援 Android 嗎？**
+A. 目前僅 iOS。Android 版本未排定時程。
+
+**Q. 需要註冊帳號嗎？**
+A. 不需要。直接下載 App 即可使用，無需建立帳號。
+
+---
+
+## Reference
+
+> 「理智上知道是詐騙，但在找到照片本人之前，情感上無法接受對方不存在。」
+> — Whitty, M. T., & Buchanan, T. (2016). The online dating romance scam.
+
+---
+
+## Download / Contact
+
+- App Store (TW): https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420
+- Email: contact@verifyai.app
+- Homepage: https://verifyai.fork.work

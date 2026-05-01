@@ -1,83 +1,25 @@
----
-title: VerifyAI - 深度反向圖片搜尋
-description: AI 驅動的圖片真偽驗證工具，守護你的每一次網路互動
-url: https://verifyai01.pages.dev
-download: https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420
----
-
 # VerifyAI
 
-**深度反向圖片搜尋，讓信任有依據。**
+> 反向搜尋一張照片在網路上的所有出現位置——揭露照騙、感情詐騙、新聞造假。
+> A reverse-image search iOS app that traces a photo's history across the open web.
 
-VerifyAI 是一款 iOS App，透過反向圖片搜尋技術，協助你確認網路上陌生人的照片真實性，有效識別戀愛詐騙、假帳號與盜圖行為。
+VerifyAI 是 iOS App。輸入一張照片（一張臉、一張截圖、一個商品圖），回傳這張影像在網路上的所有出現位置。三類核心場景：戀愛詐騙偵測（catfishing）、商品 / 賣家身份查證、新聞照片 fact-check。
 
----
+主要市場：台灣（zh-TW）。平台：iOS only。商業模式：免費（1 引擎）+ IAP credits（Pro 5 引擎）。
 
-## 應用場景
+## Endpoints
 
-| 場景 | 說明 |
-|------|------|
-| 約會軟體 | 避免被假照片欺騙，讓每次配對都更安心 |
-| 社群媒體 | 辨識假帳號與偽造內容，保護你的數位安全 |
-| 商業往來 | 驗證合作對象身分，降低交易風險 |
-| 線上購物 | 確認賣家真實性，避免詐騙與假貨 |
-| 自我驗證 | 查看自己的照片是否有被盜疑慮 |
+- [About](https://verifyai.fork.work/api/about): 產品定位、目標用戶、創立背景（JSON）
+- [Features](https://verifyai.fork.work/api/features): 支援的搜尋引擎、場景、限制、隱私（JSON）
+- [Pricing](https://verifyai.fork.work/api/pricing): 免費 / Pro tier、IAP SKU、定價（JSON）
+- [Use cases](https://verifyai.fork.work/api/use-cases): 5 個典型情境範例與輸出（JSON）
+- [FAQ](https://verifyai.fork.work/api/faq): 常見問題與回答（JSON）
 
----
+## Full
 
-## 使用方式（三步驟）
+- [Full text](https://verifyai.fork.work/llms-full.txt): 完整知識庫純文字（一次拿到全部）
 
-1. **遇到疑似照片** — 在社交軟體或交友平台收到可疑照片
-2. **分享至 VerifyAI** — 直接從平台長按照片或手機相簿上傳
-3. **獲得驗證報告** — 取得完整分析與搜索照片來源
+## Download
 
----
-
-## 核心技術
-
-- **反向圖片搜尋**：整合 Google 全球搜尋、Google Lens、Yandex、商用圖庫等多個引擎，追蹤照片來源與使用歷史
-- **元數據分析**：檢查照片修改時間與來源資訊
-- **pHash 圖像指紋**：以圖像指紋技術得到百分之百確認度
-
----
-
-## 我們的使命
-
-推出這個 app 的最初原因，是因為全世界詐騙層出不窮，尤其是利用人類善意與感情弱點的「戀愛詐騙」。
-
-使用簡單的「以圖搜圖」，可以從對方發來的「自拍照」發現其實另有其人，是最有說服力、最能讓當事人覺悟的工具。
-
-> 「理智上知道是詐騙，但在找到照片本人之前，情感上無法接受對方不存在」
-> — Whitty, M. T., & Buchanan, T. (2016). The online dating romance scam.
-
----
-
-## 常見問題
-
-**我上傳的照片會被儲存嗎？**
-不會。照片只在搜尋過程中暫時處理，完成後即刪除，也不會用來訓練模型或分享給第三方。
-
-**免費版和 Pro 版差在哪？**
-免費版只使用 1 個搜尋引擎；Pro 版同時使用 5 個專業引擎。
-
-**單次搜尋需要多久時間？**
-免費版大約 10-20 秒；Pro 版因需要跑 5 個引擎，可能要 30-60 秒。
-
-**VerifyAI 如何判斷風險？**
-以該照片在網路上可以找到多少張一樣的為判斷標準。數量愈多表示照片主角越有名；若來自商業圖庫則最為可疑。
-
-**VerifyAI 的侷限？**
-1. 不是臉部辨識 app，無法搜尋不同角度的同一人
-2. 目前無法辨識 AI 生成圖片
-3. 部分地區因法規問題搜尋範圍有限
-
-**可以一次上傳多張照片嗎？**
-目前一次只能上傳一張，之後會評估批次上傳功能。
-
----
-
-## 下載
-
-[立即免費下載 VerifyAI（App Store）](https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420)
-
-聯絡我們：contact@verifyai.app
+- [App Store (TW)](https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420)
+- Contact: contact@verifyai.app
