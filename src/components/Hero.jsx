@@ -1,6 +1,5 @@
 import { useI18n } from '../context/I18nContext'
-
-const APP_STORE_URL = 'https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420'
+import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function Hero() {
   const { t } = useI18n()
@@ -12,7 +11,7 @@ export default function Hero() {
         <p className="hero-long-description">{t('hero.description')}</p>
         <div className="cta-buttons">
           <a
-            href={APP_STORE_URL}
+            href={getAppStoreUrl()}
             className="btn btn-primary btn-round"
             target="_blank"
             rel="noopener noreferrer"

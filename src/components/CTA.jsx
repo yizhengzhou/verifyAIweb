@@ -1,6 +1,5 @@
 import { useI18n } from '../context/I18nContext'
-
-const APP_STORE_URL = 'https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420'
+import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function CTA() {
   const { t } = useI18n()
@@ -10,7 +9,7 @@ export default function CTA() {
       <h2>{t('cta.title')}</h2>
       <p>{t('cta.description')}</p>
       <a
-        href={APP_STORE_URL}
+        href={getAppStoreUrl()}
         className="btn"
         target="_blank"
         rel="noopener noreferrer"

@@ -1,32 +1,50 @@
 import { useState } from 'react'
 import { useI18n } from '../context/I18nContext'
-
-const SHARE_URL = 'https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420'
+import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function Campaign() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState(false)
   const [copied, setCopied] = useState(false)
 
-  function handleSubscribe(e) {
+  async function handleSubscribe(e) {
     e.preventDefault()
-    if (!email) return
-    // TODO: integrate with Mailchimp/Brevo API
-    console.log('Subscribe:', email)
-    setSubmitted(true)
-    setEmail('')
+    if (!email || submitting) return
+
+    setSubmitting(true)
+    setError(false)
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, lang }),
+      })
+      if (res.ok) {
+        setSubmitted(true)
+        setEmail('')
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   function copyLink() {
-    navigator.clipboard.writeText(SHARE_URL).then(() => {
+    navigator.clipboard.writeText(getAppStoreUrl()).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     })
   }
 
   function goToApp() {
-    window.open(SHARE_URL, '_blank', 'noopener')
+    window.open(getAppStoreUrl(), '_blank', 'noopener')
   }
 
   return (
@@ -51,9 +69,15 @@ export default function Campaign() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={t('campaign.subscribe.placeholder')}
                   required
+                  disabled={submitting}
                 />
-                <button type="submit">{t('campaign.subscribe.button')}</button>
+                <button type="submit" disabled={submitting}>
+                  {submitting ? '...' : t('campaign.subscribe.button')}
+                </button>
               </form>
+            )}
+            {error && (
+              <p className="subscribe-error">{t('campaign.subscribe.error') || '送出失敗，請稍後再試'}</p>
             )}
             <p className="subscribe-note">{t('campaign.subscribe.note')}</p>
           </div>
