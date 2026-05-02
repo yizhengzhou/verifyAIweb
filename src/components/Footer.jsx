@@ -1,6 +1,5 @@
 import { useI18n } from '../context/I18nContext'
-
-const APP_STORE_URL = 'https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420'
+import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function Footer() {
   const { t } = useI18n()
@@ -19,7 +18,7 @@ export default function Footer() {
             <li><a href="#features">{t('footer.product.features')}</a></li>
             <li><a href="#technology">{t('footer.product.technology')}</a></li>
             <li>
-              <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <a href={getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
                 {t('footer.product.changelog')}
               </a>
             </li>

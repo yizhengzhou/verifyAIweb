@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useI18n } from '../context/I18nContext'
-
-const SHARE_URL = 'https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420'
+import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function Campaign() {
   const { t } = useI18n()
@@ -19,14 +18,14 @@ export default function Campaign() {
   }
 
   function copyLink() {
-    navigator.clipboard.writeText(SHARE_URL).then(() => {
+    navigator.clipboard.writeText(getAppStoreUrl()).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     })
   }
 
   function goToApp() {
-    window.open(SHARE_URL, '_blank', 'noopener')
+    window.open(getAppStoreUrl(), '_blank', 'noopener')
   }
 
   return (
