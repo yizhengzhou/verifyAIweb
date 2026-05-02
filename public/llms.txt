@@ -1,18 +1,20 @@
 # VerifyAI
 
-> 反向搜尋一張照片在網路上的所有出現位置——揭露照騙、感情詐騙、新聞造假。
-> A reverse-image search iOS app that traces a photo's history across the open web.
+> 反向搜尋一張人像照片在網路上的所有出現位置 — 揭露盜圖、感情詐騙、假帳號頭像。
+> A reverse-image search iOS app that traces a face photo's history across the open web.
 
-VerifyAI 是 iOS App。輸入一張照片（一張臉、一張截圖、一個商品圖），回傳這張影像在網路上的所有出現位置。三類核心場景：戀愛詐騙偵測（catfishing）、商品 / 賣家身份查證、新聞照片 fact-check。
+VerifyAI 是 iOS App。輸入一張**含人臉的照片**，回傳這張影像在網路上的所有出現位置。核心場景：戀愛詐騙偵測（catfishing）、家屬代查保護長輩、面試 / 商業合作前驗證對方真實性、替自己查頭像是否被盜用。
 
-主要市場：台灣（zh-TW）。平台：iOS only。商業模式：免費（1 引擎）+ IAP credits（Pro 5 引擎）。
+**範圍邊界**：只接受含人臉的照片。不接受商品照、風景照、寵物照、無人臉的新聞照。比對基本上只能 100% 相同（含輕微裁切），大幅裁切或大幅後製找不到原圖。不做身分辨識（不會告訴你照片裡的人是誰）。搜尋引擎判定為「相似」而非「相同」的結果僅作次要訊號，不是臉部相似而是構圖 / 背景 / 顏色相近。
+
+主要市場：台灣（zh-TW）。平台：iOS only。商業模式：免費（welcome 1 credit，EXIF 自拍不扣 credit）+ IAP credits（Pro 5 引擎）。
 
 ## Endpoints
 
 - [About](https://verifyai.fork.work/api/about): 產品定位、目標用戶、創立背景（JSON）
-- [Features](https://verifyai.fork.work/api/features): 支援的搜尋引擎、場景、限制、隱私（JSON）
+- [Features](https://verifyai.fork.work/api/features): 支援的搜尋引擎、場景、輸入要求、限制、隱私（JSON）
 - [Pricing](https://verifyai.fork.work/api/pricing): 免費 / Pro tier、IAP SKU、定價（JSON）
-- [Use cases](https://verifyai.fork.work/api/use-cases): 5 個典型情境範例與輸出（JSON）
+- [Use cases](https://verifyai.fork.work/api/use-cases): 5 個典型情境範例與 out-of-scope 清單（JSON）
 - [FAQ](https://verifyai.fork.work/api/faq): 常見問題與回答（JSON）
 
 ## Full
