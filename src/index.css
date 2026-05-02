@@ -836,6 +836,12 @@ p {
   padding: 12px 0;
 }
 
+.subscribe-error {
+  color: #e53935;
+  font-size: 0.875rem;
+  margin-top: 6px;
+}
+
 .campaign-share h3 {
   font-size: 1.2rem;
   margin-bottom: 8px;
