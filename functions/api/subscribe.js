@@ -1,12 +1,7 @@
-/**
- * Cloudflare Pages Function: POST /api/subscribe
- *
- * Receives newsletter signup, forwards to Loops.
- * The Loops API key MUST be set as an env var (LOOPS_API_KEY) in
- * Cloudflare Pages > Settings > Environment variables.
- */
+// Cloudflare Pages Function: POST /api/subscribe
+// Required env vars: RESEND_API_KEY, RESEND_AUDIENCE_ID
 
-const LOOPS_ENDPOINT = "https://app.loops.so/api/v1/contacts/create";
+const RESEND_API_BASE = "https://api.resend.com";
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -19,7 +14,6 @@ export async function onRequestPost(context) {
   }
 
   const email = String(body?.email || "").trim().toLowerCase();
-  const lang = String(body?.lang || "").slice(0, 16) || "unknown";
   const honeypot = String(body?.website || "");
 
   if (honeypot) {
@@ -30,37 +24,39 @@ export async function onRequestPost(context) {
     return jsonResponse(400, { success: false, message: "Invalid email address" });
   }
 
-  if (!env.LOOPS_API_KEY) {
-    console.error("LOOPS_API_KEY env var missing");
+  if (!env.RESEND_API_KEY || !env.RESEND_AUDIENCE_ID) {
+    console.error("RESEND_API_KEY or RESEND_AUDIENCE_ID env var missing");
     return jsonResponse(500, { success: false, message: "Server not configured" });
   }
 
-  let loopsRes;
+  const endpoint = `${RESEND_API_BASE}/audiences/${env.RESEND_AUDIENCE_ID}/contacts`;
+
+  let resendRes;
   try {
-    loopsRes = await fetch(LOOPS_ENDPOINT, {
+    resendRes = await fetch(endpoint, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${env.LOOPS_API_KEY}`,
+        Authorization: `Bearer ${env.RESEND_API_KEY}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        email,
-        source: "verifyai-website",
-        userGroup: "website-signup",
-        lang,
-      }),
+      body: JSON.stringify({ email, unsubscribed: false }),
     });
   } catch (err) {
-    console.error("Loops fetch failed:", err);
+    console.error("Resend fetch failed:", err);
     return jsonResponse(502, { success: false, message: "Upstream unavailable" });
   }
 
-  if (loopsRes.ok || loopsRes.status === 409) {
+  if (resendRes.ok) {
     return jsonResponse(200, { success: true });
   }
 
-  const errBody = await loopsRes.text().catch(() => "");
-  console.error("Loops error", loopsRes.status, errBody);
+  // 422 = contact already exists; treat as idempotent success.
+  const errPayload = await resendRes.json().catch(() => ({}));
+  if (resendRes.status === 422) {
+    return jsonResponse(200, { success: true });
+  }
+
+  console.error("Resend error", resendRes.status, errPayload);
   return jsonResponse(502, { success: false, message: "Subscription service error" });
 }
 
