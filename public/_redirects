@@ -1,1 +1,8 @@
-/* /index.html 200
+# Serve static blog posts directly (don't fall back to SPA)
+/blog/*  /blog/:splat  200
+
+# Functions (api/*) handled by Cloudflare Pages Functions routing — keep above SPA fallback
+/api/*  /api/:splat  200
+
+# SPA fallback for everything else
+/*  /index.html  200
