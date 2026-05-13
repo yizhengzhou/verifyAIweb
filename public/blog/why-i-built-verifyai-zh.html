@@ -179,5 +179,18 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 </footer>
 
 </div>
+<script>
+(function(){
+  try{
+    var p='blog-founding-zh';
+    var u=new URL(location.href);
+    var qs='p='+encodeURIComponent(p)+'&ref='+encodeURIComponent(document.referrer||'');
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v=u.searchParams.get(k); if(v) qs+='&'+k+'='+encodeURIComponent(v);
+    });
+    var i=new Image(); i.src='/api/log/view?'+qs;
+  }catch(e){}
+})();
+</script>
 </body>
 </html>
