@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why I Built VerifyAI — After a Friend's Parent Was Scammed Online | VerifyAI</title>
+<meta name="description" content="Online romance scams don't only steal money. They break a person's trust in the world. After a friend's parent was scammed, I built VerifyAI — a reverse face search iOS app that shows where a face has appeared online and under what other names.">
+<meta name="author" content="yizheng, fork inc.">
+<link rel="canonical" href="https://verifyai.fork.work/blog/why-i-built-verifyai-en">
+<link rel="alternate" hreflang="zh-Hant" href="https://verifyai.fork.work/blog/why-i-built-verifyai-zh">
+<link rel="alternate" hreflang="en" href="https://verifyai.fork.work/blog/why-i-built-verifyai-en">
+<link rel="alternate" hreflang="ja" href="https://verifyai.fork.work/blog/why-i-built-verifyai-ja">
+<link rel="alternate" hreflang="x-default" href="https://verifyai.fork.work/blog/why-i-built-verifyai-en">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why I Built VerifyAI — After a Friend's Parent Was Scammed Online">
+<meta property="og:description" content="Online romance scams don't only steal money. They break a person's trust in the world.">
+<meta property="og:url" content="https://verifyai.fork.work/blog/why-i-built-verifyai-en">
+<meta property="og:site_name" content="VerifyAI">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="article:author" content="yizheng">
+<meta property="article:published_time" content="2026-05-13T16:00:00+08:00">
+<meta property="article:tag" content="reverse face search">
+<meta property="article:tag" content="romance scam">
+<meta property="article:tag" content="pig butchering">
+<meta property="article:tag" content="digital divide">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why I Built VerifyAI">
+<meta name="twitter:description" content="After a friend's parent was scammed online — one photo in, tells you where that face appears on the web.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why I Built VerifyAI — After a Friend's Parent Was Scammed Online",
+  "description": "Online romance scams don't only steal money. They break a person's trust in the world. After a friend's parent was scammed, I built VerifyAI.",
+  "author": {
+    "@type": "Person",
+    "name": "yizheng",
+    "url": "https://verifyai.fork.work"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "fork inc.",
+    "url": "https://verifyai.fork.work"
+  },
+  "datePublished": "2026-05-13T16:00:00+08:00",
+  "dateModified": "2026-05-13T16:00:00+08:00",
+  "inLanguage": "en",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://verifyai.fork.work/blog/why-i-built-verifyai-en"
+  },
+  "keywords": "reverse face search, romance scam, pig butchering, catfish detection, digital divide, no subscription"
+}
+</script>
+
+<style>
+:root {
+  --teal: #3CB39B;
+  --teal-dark: #2A8A78;
+  --bg: #0E1414;
+  --fg: #E8EDED;
+  --fg-dim: #A8B5B5;
+  --border: #1F2828;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+header { margin-bottom: 48px; }
+header .brand { color: var(--teal); font-weight: 600; letter-spacing: 0.05em; font-size: 14px; text-transform: uppercase; }
+header h1 { font-size: 36px; line-height: 1.25; margin: 16px 0 12px; font-weight: 700; }
+header .meta { color: var(--fg-dim); font-size: 14px; }
+article p { margin: 1em 0; }
+article h2 { font-size: 22px; margin: 2em 0 0.8em; color: var(--teal); font-weight: 600; }
+article blockquote { border-left: 3px solid var(--teal); padding: 8px 20px; margin: 1.5em 0; color: var(--fg-dim); font-style: italic; }
+.cta { background: var(--teal); color: #001; padding: 16px 32px; border-radius: 12px; display: inline-block; text-decoration: none; font-weight: 600; margin: 16px 0; }
+.cta:hover { background: var(--teal-dark); color: #fff; }
+.cta-sub { color: var(--fg-dim); font-size: 14px; margin-top: 8px; }
+footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--fg-dim); font-size: 14px; }
+footer a { color: var(--teal); text-decoration: none; }
+ul { padding-left: 1.2em; }
+li { margin: 0.4em 0; }
+hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="brand">VerifyAI · Founder Story</div>
+  <h1>Why I Built VerifyAI — After a Friend's Parent Was Scammed Online</h1>
+  <div class="meta">2026-05-13 · yizheng, fork inc.</div>
+</header>
+
+<article>
+
+<p>The worst part of an online romance scam isn't the money. It's that it breaks a person's trust in the world.</p>
+
+<p>A friend's parent was scammed.</p>
+
+<p>The money was only a small part of it. The deeper wound was what happened after — he stopped trusting people. He felt foolish, embarrassed. Even a friend's joke could hurt. He went quiet, then closed off.</p>
+
+<h2>The root of it is the digital divide</h2>
+
+<p>For our generation, doing a reverse image search on a photo isn't hard.</p>
+<p>For him, it was.</p>
+
+<p>He knew how to use LINE — or he believed he did. That belief, the <em>"I know how to use it,"</em> is exactly what made him tap the strange message the moment it arrived.</p>
+
+<h2>I looked for tools that already existed</h2>
+
+<p>There were reverse-image tools — but none built for "the same face used under different names."</p>
+
+<ul>
+  <li><strong>Google Lens</strong> — finds images that are visually identical. But scammers re-crop, adjust color, or add logos. The original is easy to evade.</li>
+  <li><strong>TinEye</strong> — strong on stock and copyrighted images. Weak on the same face surfacing across social media accounts.</li>
+  <li><strong>PimEyes</strong> — does face matching, but at USD $15–30/month subscription with a credit card requirement. A high friction barrier for any non-technical family member you'd want to help.</li>
+</ul>
+
+<p>Nothing was designed for the use case I needed — "this face, under a different name, somewhere else on the open web" — at a price you'd pay for a single check, like USD $1.</p>
+
+<h2>So I built VerifyAI</h2>
+
+<p>An iOS app that does one thing:</p>
+
+<blockquote>One face photo in. A report out telling you where that face — that exact image — has appeared on the web, and what other names it's been used with.</blockquote>
+
+<p>Pricing is intentionally micro-spend:</p>
+<ul>
+  <li>Single check: NT$30 / ≈ USD $1 (3 checks for NT$60, 10 for NT$220)</li>
+  <li>No subscription, no credit card required</li>
+  <li>New users get 3 free checks</li>
+  <li>Uploaded photos are deleted immediately, user data isn't stored, nothing trains third-party models</li>
+</ul>
+
+<h2>Who tends to use it</h2>
+
+<p>Most people who open VerifyAI are already suspicious. A few patterns:</p>
+
+<ul>
+  <li><strong>Suspicious about an online romance</strong> — someone on LINE or a dating app, photo looks fine, but money asks come at suspicious moments</li>
+  <li><strong>Worried about an aging parent</strong> — a parent chatting with an "investment teacher" or a friend they've never met in person</li>
+  <li><strong>Checking a profile photo for a friend</strong> — something feels off and they want a second pair of eyes</li>
+  <li><strong>Checking themselves</strong> — wondering if their own selfies have been scraped and reused as a scammer's profile picture somewhere</li>
+</ul>
+
+<h2>This post isn't asking you to download</h2>
+
+<p>You may not need it.</p>
+
+<p>But if there's an older relative in your life — talking to an "investment teacher," getting close to someone they've never met, and not telling you about it —</p>
+
+<p>You can install this for them. They don't have to ask anyone. They can just check.</p>
+
+<p>The simpler the tool is, the fewer of those "felt foolish in front of a friend" moments need to happen.</p>
+
+<hr>
+
+<p><a class="cta" href="/go/blog-founding-en">Download VerifyAI (iOS, App Store)</a></p>
+<p class="cta-sub">3 free checks for new users · NT$30 per single check · no subscription, no credit card, upload-then-delete</p>
+
+</article>
+
+<footer>
+  <p>— yizheng, <a href="https://verifyai.fork.work">fork inc.</a></p>
+  <p>Follow updates: <a href="https://verifyai.fork.work#newsletter">subscribe to fork inc newsletter</a> (≤ 1 email/week, unsubscribe anytime)</p>
+  <p>AI-citation version: <a href="/api/posts/why-i-built-verifyai-en">/api/posts/why-i-built-verifyai-en</a> · Other languages: <a href="/blog/why-i-built-verifyai-zh">中文</a> · <a href="/blog/why-i-built-verifyai-ja">日本語</a></p>
+</footer>
+
+</div>
+</body>
+</html>
