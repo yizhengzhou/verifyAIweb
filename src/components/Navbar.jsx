@@ -9,6 +9,17 @@ export default function Navbar() {
 
   const langLabels = { 'zh-TW': '繁中', en: 'EN', ja: '日本語', ko: '한국어' }
 
+  // Founder story blog link per current locale (ko falls back to en blog)
+  const blogSlug =
+    lang === 'zh-TW' ? 'why-i-built-verifyai-zh'
+    : lang === 'ja' ? 'why-i-built-verifyai-ja'
+    : 'why-i-built-verifyai-en'
+  const blogLabel =
+    lang === 'zh-TW' ? '創辦故事'
+    : lang === 'ja' ? '創設のストーリー'
+    : lang === 'ko' ? '창립 스토리'
+    : 'Founder Story'
+
   // Close menu on outside click
   useEffect(() => {
     function handleClickOutside(event) {
@@ -67,6 +78,11 @@ export default function Navbar() {
           <li>
             <a href="#faq" onClick={() => setMenuOpen(false)}>
               {t('nav.faq') !== 'nav.faq' ? t('nav.faq') : 'FAQ'}
+            </a>
+          </li>
+          <li>
+            <a href={`/blog/${blogSlug}`} onClick={() => setMenuOpen(false)}>
+              {blogLabel}
             </a>
           </li>
           <li className="lang-switcher">
