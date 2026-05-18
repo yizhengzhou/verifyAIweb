@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
     return jsonResponse(500, { success: false, message: "Server not configured" });
   }
 
-  const pdfUrl = env.SCAMMER_MIND_PDF_URL || "";
+  const pdfUrl = env.SCAMMER_MIND_PDF_URL || "https://verifyai.fork.work/lead-magnets/scammer-mind-v0.1.pdf";
   const fromEmail = env.SCAMMER_MIND_FROM_EMAIL || "VerifyAI <hello@fork.work>";
 
   const contactRes = await fetch(
@@ -92,9 +92,7 @@ export async function onRequestPost(context) {
 }
 
 function renderEmailHtml({ pdfUrl }) {
-  const link = pdfUrl
-    ? `<a href="${pdfUrl}" style="display:inline-block;background:#3CB39B;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;">下載 PDF</a>`
-    : `<p style="color:#888;">（PDF 連結將於 5/22 起寄出、屆時你會再收到一封含連結的郵件）</p>`;
+  const link = `<a href="${pdfUrl}" style="display:inline-block;background:#3CB39B;color:#fff;padding:14px 28px;border-radius:6px;text-decoration:none;font-weight:bold;">下載 PDF</a>`;
   return `<!DOCTYPE html>
 <html lang="zh-TW">
 <head><meta charset="utf-8"></head>
@@ -127,9 +125,7 @@ ${link}
 }
 
 function renderEmailText({ pdfUrl }) {
-  const linkLine = pdfUrl
-    ? `下載 PDF：${pdfUrl}`
-    : `（PDF 連結將於 5/22 起寄出、屆時你會再收到一封含連結的郵件）`;
+  const linkLine = `下載 PDF：${pdfUrl}`;
   return `謝謝你訂閱 VerifyAI 反詐電子報
 
 附上你索取的內容：
