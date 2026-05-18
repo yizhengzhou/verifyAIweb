@@ -13,6 +13,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import TermsOfService from './components/legal/TermsOfService'
 import PrivacyPolicy from './components/legal/PrivacyPolicy'
+import ScammerMind from './components/ScammerMind'
 import ScrollToTop from './components/ScrollToTop'
 
 function HomePage() {
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/terms" element={<TermsOfService />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/scammer-mind" element={<ScammerMind />} />
       </Routes>
     </>
   )
