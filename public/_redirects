@@ -4,5 +4,8 @@
 # Functions (api/*) handled by Cloudflare Pages Functions routing — keep above SPA fallback
 /api/*  /api/:splat  200
 
+# Serve PDF lead magnets directly (don't fall back to SPA)
+/lead-magnets/*  /lead-magnets/:splat  200
+
 # SPA fallback for everything else
 /*  /index.html  200
