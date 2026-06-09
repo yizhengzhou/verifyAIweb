@@ -9,3 +9,4 @@
 
 # SPA fallback for everything else
 /*  /index.html  200
+/go/*  /go/:splat  200
