@@ -94,4 +94,12 @@
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <url>
+    <loc>https://verifyai.fork.work/blog/daily/2026-06-09-cna.html</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
