@@ -1,12 +1,14 @@
-# Serve static blog posts directly (don't fall back to SPA)
+# Serve static blog posts directly
 /blog/*  /blog/:splat  200
 
-# Functions (api/*) handled by Cloudflare Pages Functions routing — keep above SPA fallback
+# Functions (api/*) handled by Cloudflare Pages Functions routing
 /api/*  /api/:splat  200
 
-# Serve PDF lead magnets directly (don't fall back to SPA)
+# Serve PDF lead magnets directly
 /lead-magnets/*  /lead-magnets/:splat  200
+
+# YouTube Ads landing page
+/go/*  /go/:splat  200
 
 # SPA fallback for everything else
 /*  /index.html  200
-/go/*  /go/:splat  200
