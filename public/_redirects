@@ -10,5 +10,8 @@
 # YouTube Ads landing page
 /go/*  /go/:splat  200
 
+# Ads landing pages
+/ads/*  /ads/:splat  200
+
 # SPA fallback for everything else
 /*  /index.html  200
