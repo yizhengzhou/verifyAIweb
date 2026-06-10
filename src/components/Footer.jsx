@@ -25,6 +25,16 @@ export default function Footer() {
             <li><a href="#features">{t('footer.product.features')}</a></li>
             <li><a href="#technology">{t('footer.product.technology')}</a></li>
             <li>
+              <a href="/blog/why-i-built-verifyai-zh.html">
+                創辦故事
+              </a>
+            </li>
+            <li>
+              <a href="/blog/daily/2026-06-09-cna.html">
+                每日防詐快報
+              </a>
+            </li>
+            <li>
               <a href={getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
                 {t('footer.product.changelog')}
               </a>
