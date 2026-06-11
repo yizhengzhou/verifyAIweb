@@ -1,6 +1,105 @@
 {
-  "generated_at": "2026-06-11T08:08:12.224Z",
+  "generated_at": "2026-06-11T17:10:40.689Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/ja/daily/2026-06-11-multi-g3-ja.html",
+      "slug": "2026-06-11-multi-g3-ja",
+      "lang": "ja",
+      "title": "【注意喚起】ロマンス詐欺から投資詐欺へ。28万ドルを失った「豚屠殺詐欺」の手口",
+      "description": "SNSで親密な関係を築いた後、投資へと誘導し多額の資金を奪う「豚屠殺詐欺」の恐ろしい実態と、被害を防ぐための対策を解説します。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.597007+08:00",
+      "url": "https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g3-ja.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/en/daily/2026-06-11-multi-g3-en.html",
+      "slug": "2026-06-11-multi-g3-en",
+      "lang": "en",
+      "title": "The High Cost of Online Love: Inside a $280K Pig Butchering Scam",
+      "description": "Learn how a sophisticated romance scam led one man to lose $280,000 through a calculated &#x27;pig butchering&#x27; scheme.",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.596776+08:00",
+      "url": "https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g3-en.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-11-multi-g3-zh.html",
+      "slug": "2026-06-11-multi-g3-zh",
+      "lang": "zh",
+      "title": "從浪漫邂逅到 28 萬美元損失：揭開「殺豬盤」投資騙局的真面目",
+      "description": "一名男子在網路戀愛中陷入陷阱，被誘導投資最終損失 28 萬美元。讓我們一起分析這類詐騙的運作模式，保護自己的財產安全。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.596548+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g3-zh.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/ja/daily/2026-06-11-multi-g2-ja.html",
+      "slug": "2026-06-11-multi-g2-ja",
+      "lang": "ja",
+      "title": "【注意喚起】人生を狂わせる「豚屠殺（ピッグ・ブッチャリング）」詐欺の手口とは",
+      "description": "テネシー州で警告が出された、ロマンス詐欺とSNS型投資詐欺を組み合わせた巧妙な手口について解説します。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.596319+08:00",
+      "url": "https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g2-ja.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/en/daily/2026-06-11-multi-g2-en.html",
+      "slug": "2026-06-11-multi-g2-en",
+      "lang": "en",
+      "title": "Beware of &amp;#x27;Pig Butchering&amp;#x27;: Tennessee Warns Residents of Devastating Romance Scams",
+      "description": "Tennessee officials are alerting the public about the rise of &#x27;pig butchering&#x27; scams, where fraudsters use romantic manipulation to drain victims&#x27; life savings.",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.596072+08:00",
+      "url": "https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g2-en.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-11-multi-g2-zh.html",
+      "slug": "2026-06-11-multi-g2-zh",
+      "lang": "zh",
+      "title": "小心「殺豬盤」浪漫陷阱：從田納西州案例看新型詐騙手法",
+      "description": "美國田納西州近期發出警訊，提醒民眾警惕以感情為餌的「殺豬盤」詐騙，許多受害者在不知不覺中失去了畢生積蓄。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.595840+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g2-zh.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/ja/daily/2026-06-11-multi-g1-ja.html",
+      "slug": "2026-06-11-multi-g1-ja",
+      "lang": "ja",
+      "title": "【注意喚起】「間違いメール」から始まる巧妙な罠。ベイエリアの男性が100万ドルを失ったロマンス詐欺の手口",
+      "description": "SNS型投資詐欺の典型的なパターンである「豚屠殺（Pig Butchering）」の手口を解説。間違いメールをきっかけに信頼を築き、仮想通貨へ誘導する恐ろしい詐欺の実態に迫ります。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.595605+08:00",
+      "url": "https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g1-ja.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/en/daily/2026-06-11-multi-g1-en.html",
+      "slug": "2026-06-11-multi-g1-en",
+      "lang": "en",
+      "title": "The &amp;#x27;Wrong Number&amp;#x27; Trap: Bay Area Man Loses $1 Million in Pig Butchering Scam",
+      "description": "A cautionary tale of how a simple text message led to a devastating crypto investment loss through a sophisticated romance scam.",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.595328+08:00",
+      "url": "https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g1-en.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-11-multi-g1-zh.html",
+      "slug": "2026-06-11-multi-g1-zh",
+      "lang": "zh",
+      "title": "從一則「打錯電話」的訊息開始：揭開百萬美元加密貨幣投資陷阱",
+      "description": "一名灣區男子因收到陌生訊息，在建立情感連結後陷入加密貨幣投資詐騙，損失高達 100 萬美元。讓我們一起分析這類「殺豬盤」的運作邏輯。",
+      "date": "2026-06-11",
+      "dateIso": "2026-06-11T20:53:22.594647+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g1-zh.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-11-cna.html",
       "slug": "2026-06-11-cna",
