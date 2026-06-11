@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "articles": [
+    {
+      "date": "2026-06-09",
+      "slug": "2026-06-09-cna",
+      "type": "A",
+      "source_id": "TW-04",
+      "source_url": "",
+      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
+      "topic_fingerprint": "romance-scam-elder-bank-intervention",
+      "status": "published",
+      "humanizer_applied": false,
+      "note": "pipeline v3.1 之前發布，slug 從 cna-daily 更正為 cna"
+    },
+    {
+      "date": "2026-06-10",
+      "slug": "2026-06-10-cna",
+      "type": "A",
+      "source_id": "TW-04",
+      "source_url": "",
+      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
+      "topic_fingerprint": "romance-scam-elder-bank-intervention",
+      "status": "published",
+      "humanizer_applied": false,
+      "note": "pipeline v3.1 發布，同源新聞重用（去重邏輯尚未上線）"
+    }
+  ],
+  "type_b_used": [
+    {
+      "topic_id": "B-01",
+      "topic_label": "殺豬盤資金流向與洗錢機制",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-02",
+      "topic_label": "詐騙集團招募與訓練話術師",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-03",
+      "topic_label": "AI生成人臉用於詐騙",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-04",
+      "topic_label": "盜照受害者自救指南",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-05",
+      "topic_label": "長輩特別容易被感情詐騙的原因",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-06",
+      "topic_label": "詐騙劇本的標準化",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-07",
+      "topic_label": "受害者心理復原",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-08",
+      "topic_label": "警察辦詐騙案的限制",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-09",
+      "topic_label": "全球詐騙規模統計",
+      "last_used": null,
+      "cooldown_until": null
+    },
+    {
+      "topic_id": "B-10",
+      "topic_label": "逆向搜圖技術原理",
+      "last_used": null,
+      "cooldown_until": null
+    }
+  ]
+}
