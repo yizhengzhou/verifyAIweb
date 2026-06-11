@@ -24,6 +24,18 @@
       "status": "published",
       "humanizer_applied": false,
       "note": "pipeline v3.1 發布，同源新聞重用（去重邏輯尚未上線）"
+    },
+    {
+      "date": "2026-06-11",
+      "slug": "2026-06-11-cna",
+      "type": "A",
+      "source_id": "TW-04",
+      "source_url": "",
+      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
+      "fingerprint": "台中婦女網路交友老公詐騙匯款",
+      "status": "published",
+      "humanizer_applied": true,
+      "note": "pipeline v3.1 / restored during multilingual pipeline e2e"
     }
   ],
   "type_b_used": [
