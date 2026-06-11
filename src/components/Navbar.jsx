@@ -86,7 +86,7 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href=\"/blog/daily/2026-06-09-cna.html\" onClick={() => setMenuOpen(false)}>
+            <a href="/blog/daily/2026-06-09-cna.html" onClick={() => setMenuOpen(false)}>
               {lang === 'zh-TW' ? '每日防詐' : lang === 'ja' ? '詐欺対策' : 'Scam Report'}
             </a>
           </li>
