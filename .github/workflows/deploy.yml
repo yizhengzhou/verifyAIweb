@@ -1,0 +1,20 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual deploy'
+        required: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy
+        run: |
+          curl -s -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/e69e6d5c-f801-4c1d-996d-b6537d41147d"
+          echo "CF Pages deploy triggered"
