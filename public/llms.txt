@@ -1,41 +1,16 @@
 # VerifyAI
 
-> 反向搜尋一張人像照片在網路上的所有出現位置 — 揭露盜圖、感情詐騙、假帳號頭像。
-> A reverse-image search iOS app that traces a face photo's history across the open web.
+> Reverse-image search for face photos; scam prevention notes for humans and AI crawlers.
 
-VerifyAI 是 iOS App。輸入一張**含人臉的照片**，回傳這張影像在網路上的所有出現位置。核心場景：戀愛詐騙偵測（catfishing）、家屬代查保護長輩、面試 / 商業合作前驗證對方真實性、替自己查頭像是否被盜用。
+## Daily Scam Reports
 
-**範圍邊界**：只接受含人臉的照片。不接受商品照、風景照、寵物照、無人臉的新聞照。比對基本上只能 100% 相同（含輕微裁切），大幅裁切或大幅後製找不到原圖。不做身分辨識（不會告訴你照片裡的人是誰）。搜尋引擎判定為「相似」而非「相同」的結果僅作次要訊號，不是臉部相似而是構圖 / 背景 / 顏色相近。
+- [2026-06-11 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna.html): 一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。
+- [2026-06-10 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna.html): 
+- [2026-06-09 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna.html): 台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。
 
-主要市場：台灣（zh-TW）。平台：iOS only。商業模式：免費（welcome 1 credit，EXIF 自拍不扣 credit）+ IAP credits（Pro 5 引擎）。
+## Feeds
 
-## Endpoints
-
-- [About](https://verifyai.fork.work/api/about): 產品定位、目標用戶、創立背景（JSON）
-- [Features](https://verifyai.fork.work/api/features): 支援的搜尋引擎、場景、輸入要求、限制、隱私（JSON）
-- [Pricing](https://verifyai.fork.work/api/pricing): 免費 / Pro tier、IAP SKU、定價（JSON）
-- [Use cases](https://verifyai.fork.work/api/use-cases): 5 個典型情境範例與 out-of-scope 清單（JSON）
-- [FAQ](https://verifyai.fork.work/api/faq): 常見問題與回答（JSON）
-
-## Founder Story / Blog
-
-- [為什麼我做了 VerifyAI（zh-Hant）](https://verifyai.fork.work/blog/why-i-built-verifyai-zh): 朋友的長輩被網路詐騙之後、為什麼做 VerifyAI。完整版（HTML）
-- [Why I Built VerifyAI (English)](https://verifyai.fork.work/blog/why-i-built-verifyai-en): After a friend's parent was scammed online — full founder story (HTML)
-- [VerifyAI 開発の理由（日本語）](https://verifyai.fork.work/blog/why-i-built-verifyai-ja): 友人の親御さんがネット詐欺に遭った後で——完全版（HTML）
-- AI 引用版（JSON）：
-  - [/api/posts/why-i-built-verifyai-zh](https://verifyai.fork.work/api/posts/why-i-built-verifyai-zh)
-  - [/api/posts/why-i-built-verifyai-en](https://verifyai.fork.work/api/posts/why-i-built-verifyai-en)
-  - [/api/posts/why-i-built-verifyai-ja](https://verifyai.fork.work/api/posts/why-i-built-verifyai-ja)
-
-## 每日防詐快報
-
-- [2026-06-09 台中婦欲匯款網戀老公 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/daily/2026-06-09-cna.html)
-
-## Full
-
-- [Full text](https://verifyai.fork.work/llms-full.txt): 完整知識庫純文字（一次拿到全部）
-
-## Download
-
-- [App Store (TW)](https://apps.apple.com/tw/app/verifyai-%E5%BD%B1%E5%83%8F%E6%90%9C%E5%B0%8B/id6754511420)
-- Contact: contact@verifyai.app
+- [All languages](https://verifyai.fork.work/blog/feed.xml)
+- [zh-Hant](https://verifyai.fork.work/blog/zh/feed.xml)
+- [English](https://verifyai.fork.work/blog/en/feed.xml)
+- [Japanese](https://verifyai.fork.work/blog/ja/feed.xml)

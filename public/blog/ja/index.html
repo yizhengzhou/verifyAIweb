@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ブログ — VerifyAI</title>
+<meta name="description" content="VerifyAI ブログ — 日本語">
+<link rel="canonical" href="https://verifyai.fork.work/blog/ja/">
+<link rel="icon" href="/logov2.png">
+<link rel="apple-touch-icon" href="/logov2.png">
+<link rel="alternate" type="application/rss+xml" title="VerifyAI ブログ RSS" href="https://verifyai.fork.work/blog/ja/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ブログ — VerifyAI">
+<meta property="og:description" content="VerifyAI ブログ — 日本語">
+<meta property="og:url" content="https://verifyai.fork.work/blog/ja/">
+<meta property="og:site_name" content="VerifyAI">
+<meta property="og:image" content="https://verifyai.fork.work/logov2.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="zh-Hant" href="https://verifyai.fork.work/blog/zh/">
+  <link rel="alternate" hreflang="en" href="https://verifyai.fork.work/blog/en/">
+  <link rel="alternate" hreflang="ja" href="https://verifyai.fork.work/blog/ja/">
+<style>
+  :root {
+    --bg: #0a0a0a; --text: #e0e0e0; --accent: #00d4aa;
+    --card-bg: #1a1a1a; --border: #333; --muted: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6; min-height: 100vh;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+  header { margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); text-align: center; }
+  header h1 { font-size: 2.2rem; color: var(--accent); margin-bottom: 0.5rem; }
+  header p { color: var(--muted); }
+  .lang-switcher { display: flex; justify-content: center; gap: 1rem; margin-bottom: 2.5rem; font-size: 0.95rem; }
+  .lang-switcher a { color: var(--muted); text-decoration: none; padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid transparent; }
+  .lang-switcher a.active { color: var(--accent); background: rgba(0,212,170,0.1); border-color: var(--accent); }
+  .sections { display: grid; gap: 2rem; }
+  .section-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 2rem;
+    transition: border-color 0.2s;
+  }
+  .section-card:hover { border-color: var(--accent); }
+  .section-card h2 { font-size: 1.3rem; color: var(--accent); margin-bottom: 0.75rem; }
+  .section-card h2 a { color: var(--accent); text-decoration: none; }
+  .section-card .count { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.5rem; }
+  .section-card p { color: var(--muted); font-size: 0.9rem; }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 ブログ</h1>
+      <p>VerifyAI ブログ — 日本語</p>
+    </header>
+
+    <nav class="lang-switcher">
+            <a href="/blog/zh/" >繁體中文</a>
+      <a href="/blog/en/" >English</a>
+      <a href="/blog/ja/" class="active">日本語</a>
+    </nav>
+
+    <div class="sections">
+      <div class="section-card">
+        <h2><a href="/blog/ja/daily/">📰 デイリー速報</a></h2>
+        <div class="count">0 件の記事</div>
+        <p>毎日の詐欺ニュースを主要ニュースソースから自動収集。</p>
+      </div>
+      
+      <div class="section-card">
+        <h2><a href="https://verifyai.fork.work/blog/why-i-built-verifyai-ja">💡 VerifyAI 開発の理由——友人の親御さんがネット詐欺に遭った後で | VerifyAI</a></h2>
+        <p>ネット詐欺で本当に怖いのは、お金よりも「人を信じられなくなる」こと。友人の親御さんが被害に遭った後、VerifyAI を作りました。一枚の人物写真を入れると、その顔・その画像がネット上のどこに出ているか、別の名前で使われていないかを教えてくれる iOS アプリです。</p>
+      </div>
+    </div>
+
+    <footer>
+      <p><a href="/">← VerifyAI 首頁</a></p>
+      <p style="margin-top:1rem">&copy; fork inc. — VerifyAI</p>
+    </footer>
+  </div>
+</body>
+</html>
