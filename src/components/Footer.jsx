@@ -30,7 +30,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="/blog/daily/2026-06-09-cna.html">
+              <a href="/blog/zh/daily/">
                 每日防詐快報
               </a>
             </li>
