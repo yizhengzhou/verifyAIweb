@@ -1,33 +1,16 @@
-# VerifyAI — LLMs.txt
-> Website: https://verifyai.fork.work
-> Description: VerifyAI 反詐騙知識平台 — 每日防詐快報與防詐知識庫
+# VerifyAI
 
-## Blog Indexes
-- [繁體中文 Blog](https://verifyai.fork.work/blog/zh/): VerifyAI 部落格 — 繁體中文
-- [繁體中文 Daily](https://verifyai.fork.work/blog/zh/daily/): 每日快報
-- [English Blog](https://verifyai.fork.work/blog/en/): VerifyAI Blog — English
-- [English Daily](https://verifyai.fork.work/blog/en/daily/): Daily Brief
-- [日本語 Blog](https://verifyai.fork.work/blog/ja/): VerifyAI ブログ — 日本語
-- [日本語 Daily](https://verifyai.fork.work/blog/ja/daily/): デイリー速報
+> Reverse-image search for face photos; scam prevention notes for humans and AI crawlers.
 
-## Daily Posts
-### 繁體中文
-- [台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報](https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna): 一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。
-- [台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報](https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna): 
-- [台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報](https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna): 台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。
+## Daily Scam Reports
 
-## Legacy Posts (redirected to /blog/zh/daily/)
-- [2026-06-11-cna — VerifyAI](https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna.html)
-- [2026-06-10-cna — VerifyAI](https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna.html)
-- [2026-06-09-cna — VerifyAI](https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna.html)
+- [2026-06-11 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna.html): 一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。
+- [2026-06-10 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna.html): 
+- [2026-06-09 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna.html): 台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。
 
-## Founder Posts
-- [Why I Built VerifyAI — After a Friend's Parent Was Scammed Online | VerifyAI](https://verifyai.fork.work/blog/why-i-built-verifyai-en)
-- [VerifyAI 開発の理由——友人の親御さんがネット詐欺に遭った後で | VerifyAI](https://verifyai.fork.work/blog/why-i-built-verifyai-ja)
-- [為什麼我做了 VerifyAI——朋友的長輩被網路詐騙之後 | VerifyAI](https://verifyai.fork.work/blog/why-i-built-verifyai-zh)
+## Feeds
 
-## Optional
-- [Sitemap](https://verifyai.fork.work/sitemap.xml)
-- [繁體中文 RSS](https://verifyai.fork.work/blog/zh/feed.xml)
-- [English RSS](https://verifyai.fork.work/blog/en/feed.xml)
-- [日本語 RSS](https://verifyai.fork.work/blog/ja/feed.xml)
+- [All languages](https://verifyai.fork.work/blog/feed.xml)
+- [zh-Hant](https://verifyai.fork.work/blog/zh/feed.xml)
+- [English](https://verifyai.fork.work/blog/en/feed.xml)
+- [Japanese](https://verifyai.fork.work/blog/ja/feed.xml)
