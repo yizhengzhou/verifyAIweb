@@ -3,32 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VerifyAI 每日防詐快報 — VerifyAI</title>
-<meta name="description" content="每日整理網路感情詐騙、盜圖與假帳號案例。">
+<title>每日快報 — VerifyAI</title>
+<meta name="description" content="VerifyAI 繁體中文 每日快報。每日反詐騙新聞摘要與防詐知識。">
 <link rel="canonical" href="https://verifyai.fork.work/blog/zh/daily/">
-<link rel="alternate" hreflang="zh-Hant" href="https://verifyai.fork.work/blog/zh/daily/">
-<link rel="alternate" hreflang="en" href="https://verifyai.fork.work/blog/en/daily/">
-<link rel="alternate" hreflang="ja" href="https://verifyai.fork.work/blog/ja/daily/">
-<link rel="alternate" type="application/rss+xml" title="VerifyAI 每日防詐快報" href="https://verifyai.fork.work/blog/zh/feed.xml">
+<link rel="icon" href="/logov2.png">
+<link rel="apple-touch-icon" href="/logov2.png">
+<link rel="alternate" type="application/rss+xml" title="VerifyAI 每日快報 RSS" href="https://verifyai.fork.work/blog/zh/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="每日快報 — VerifyAI">
+<meta property="og:description" content="VerifyAI 繁體中文 每日快報。每日反詐騙新聞摘要與防詐知識。">
+<meta property="og:url" content="https://verifyai.fork.work/blog/zh/daily/">
+<meta property="og:site_name" content="VerifyAI">
+<meta property="og:image" content="https://verifyai.fork.work/logov2.png">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="zh-Hant" href="https://verifyai.fork.work/blog/zh/daily/">
+  <link rel="alternate" hreflang="en" href="https://verifyai.fork.work/blog/en/daily/">
+  <link rel="alternate" hreflang="ja" href="https://verifyai.fork.work/blog/ja/daily/">
 <style>
-:root{--teal:#3CB39B;--bg:#0E1414;--fg:#E8EDED;--muted:#A8B5B5;--border:#1F2828}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Inter","Noto Sans TC","Noto Sans JP",sans-serif;line-height:1.7}.wrap{max-width:860px;margin:0 auto;padding:56px 24px 88px}.brand{color:var(--teal);font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:13px}h1{font-size:clamp(32px,5vw,52px);line-height:1.08;margin:16px 0 12px}p.lead{color:var(--muted);font-size:18px;margin:0 0 32px}.lang{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 40px}.lang a{color:var(--fg);text-decoration:none;border:1px solid var(--border);padding:6px 10px;border-radius:6px}.lang a.active{background:var(--teal);color:#001;border-color:var(--teal)}.post-card{border-top:1px solid var(--border);padding:24px 0}.post-card time{color:var(--muted);font-size:13px}.post-card h2{font-size:24px;line-height:1.25;margin:6px 0 8px}.post-card a{color:var(--fg);text-decoration:none}.post-card a:hover{color:var(--teal)}.post-card p{color:var(--muted);margin:0}.empty{color:var(--muted)}footer{border-top:1px solid var(--border);margin-top:48px;padding-top:24px;color:var(--muted);font-size:14px}footer a{color:var(--teal)}
+  :root {
+    --bg: #0a0a0a; --text: #e0e0e0; --accent: #00d4aa;
+    --card-bg: #1a1a1a; --border: #333; --muted: #888;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6; min-height: 100vh;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; }
+  header { margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 2rem; color: var(--accent); margin-bottom: 0.5rem; }
+  header .breadcrumb { font-size: 0.85rem; color: var(--muted); }
+  header .breadcrumb a { color: var(--accent); text-decoration: none; }
+  header .breadcrumb a:hover { text-decoration: underline; }
+  .lang-switcher { display: flex; gap: 1rem; margin-bottom: 2rem; font-size: 0.9rem; }
+  .lang-switcher a { color: var(--muted); text-decoration: none; padding: 0.25rem 0.5rem; border-radius: 4px; }
+  .lang-switcher a.active { color: var(--accent); background: rgba(0,212,170,0.1); }
+  .post-list { display: flex; flex-direction: column; gap: 1.5rem; }
+  .post-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+  .post-card time { font-size: 0.8rem; color: var(--muted); display: block; margin-bottom: 0.5rem; }
+  .post-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+  .post-card h3 a { color: var(--text); text-decoration: none; }
+  .post-card h3 a:hover { color: var(--accent); }
+  .post-card p { font-size: 0.9rem; color: var(--muted); }
+  footer { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); text-align: center; font-size: 0.8rem; color: var(--muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+  .empty { text-align: center; padding: 3rem; color: var(--muted); }
 </style>
 </head>
-<body><main class="wrap"><div class="brand">VerifyAI Blog</div><h1>VerifyAI 每日防詐快報</h1><p class="lead">每日整理網路感情詐騙、盜圖與假帳號案例。</p><nav class="lang"><a class="active" href="/blog/zh/daily/">繁體中文</a><a class="" href="/blog/en/daily/">English</a><a class="" href="/blog/ja/daily/">日本語</a></nav>
-    <article class="post-card">
-      <time datetime="2026-06-11">2026-06-11</time>
-      <h2><a href="/blog/zh/daily/2026-06-11-cna.html">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙</a></h2>
-      <p>一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。</p>
-    </article>
+<body>
+  <div class="container">
+    <header>
+      <div class="breadcrumb"><a href="/">VerifyAI</a> / <a href="/blog/zh/">部落格</a> / 每日快報</div>
+      <h1>📰 每日快報</h1>
+    </header>
 
-    <article class="post-card">
-      <time datetime="2026-06-10">2026-06-10</time>
-      <h2><a href="/blog/zh/daily/2026-06-10-cna.html">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙</a></h2>
-      <p></p>
-    </article>
+    <nav class="lang-switcher">
+            <a href="/blog/zh/daily/" class="active">繁體中文</a>
+      <a href="/blog/en/daily/" >English</a>
+      <a href="/blog/ja/daily/" >日本語</a>
+    </nav>
 
-    <article class="post-card">
-      <time datetime="2026-06-09">2026-06-09</time>
-      <h2><a href="/blog/zh/daily/2026-06-09-cna.html">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙</a></h2>
-      <p>台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。</p>
-    </article><footer><a href="/">VerifyAI</a> · <a href="/blog/feed.xml">RSS</a></footer></main></body></html>
+    <div class="post-list">
+            <article class="post-card">
+        <time datetime="2026-06-11T15:20:04+08:00">2026-06-11</time>
+        <h3><a href="https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報</a></h3>
+        <p>一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。</p>
+      </article>
+      <article class="post-card">
+        <time datetime="2026-06-10T10:01:12+08:00">2026-06-10</time>
+        <h3><a href="https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報</a></h3>
+        <p></p>
+      </article>
+      <article class="post-card">
+        <time datetime="2026-06-09T11:52:28+08:00">2026-06-09</time>
+        <h3><a href="https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna">台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙 — VerifyAI 每日防詐快報</a></h3>
+        <p>台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。</p>
+      </article>
+    </div>
+
+    <footer>
+      <p><a href="/blog/zh/">← 回部落格首頁</a></p>
+      <p style="margin-top:1rem">&copy; fork inc. — VerifyAI</p>
+    </footer>
+  </div>
+</body>
+</html>
