@@ -16,6 +16,11 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${t('hero.ctaButton')} - App Store`}
+            onClick={() => {
+              if (window.gtag) {
+                window.gtag('event', 'conversion', { send_to: 'AW-18226736945/tHpKCJrLtr0cELHel_ND' })
+              }
+            }}
           >
             {t('hero.ctaButton')}
           </a>
