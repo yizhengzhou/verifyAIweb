@@ -25,6 +25,10 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-18226736945');
+    function gtag_report_conversion(url) {
+      gtag('event', 'conversion', {'send_to': 'AW-18226736945/tHpKCJrLtr0cELHel_ND'});
+      return true;
+    }
   </script>
 
   <style>
@@ -146,7 +150,7 @@
     </ul>
 
     <a class="cta" href="https://apps.apple.com/app/id6754511420"
-       onclick="gtag('event', 'conversion', { 'send_to': 'AW-18226736945/zAKnCPmVrb0cELHel_ND', 'value': 1.0, 'currency': 'TWD' });"
+       onclick="return gtag_report_conversion(this.href);"
        target="_blank" rel="noopener noreferrer">
       Download on the App Store
     </a>
