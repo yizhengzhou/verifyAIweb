@@ -8,10 +8,10 @@
       "source_id": "TW-04",
       "source_url": "",
       "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "topic_fingerprint": "romance-scam-elder-bank-intervention",
       "status": "published",
       "humanizer_applied": false,
-      "note": "pipeline v3.1 之前發布，slug 從 cna-daily 更正為 cna"
+      "note": "pipeline v3.1 之前發布，slug 從 cna-daily 更正為 cna",
+      "fingerprint": "bank_intervention-elder_victim-romance_scam"
     },
     {
       "date": "2026-06-10",
@@ -20,10 +20,10 @@
       "source_id": "TW-04",
       "source_url": "",
       "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "topic_fingerprint": "romance-scam-elder-bank-intervention",
       "status": "published",
       "humanizer_applied": false,
-      "note": "pipeline v3.1 發布，同源新聞重用（去重邏輯尚未上線）"
+      "note": "pipeline v3.1 發布，同源新聞重用（去重邏輯尚未上線）",
+      "fingerprint": "bank_intervention-elder_victim-romance_scam"
     },
     {
       "date": "2026-06-11",
@@ -32,7 +32,7 @@
       "source_id": "TW-04",
       "source_url": "",
       "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "fingerprint": "台中婦女網路交友老公詐騙匯款",
+      "fingerprint": "bank_intervention-elder_victim-romance_scam",
       "status": "published",
       "humanizer_applied": true,
       "note": "pipeline v3.1 / restored during multilingual pipeline e2e"
