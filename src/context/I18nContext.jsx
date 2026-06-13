@@ -5,6 +5,13 @@ const I18nContext = createContext()
 const SUPPORTED_LANGUAGES = ['zh-TW', 'en', 'ja', 'ko']
 
 function detectLanguage() {
+  const params = new URLSearchParams(window.location.search)
+  const urlLang = params.get('lang')
+  if (urlLang && SUPPORTED_LANGUAGES.includes(urlLang)) {
+    localStorage.setItem('preferredLanguage', urlLang)
+    return urlLang
+  }
+
   const saved = localStorage.getItem('preferredLanguage')
   if (saved && SUPPORTED_LANGUAGES.includes(saved)) return saved
 
