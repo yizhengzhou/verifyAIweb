@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-14T23:00:31.609Z",
+  "generated_at": "2026-06-15T23:00:41.291Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-16-goodshepherd-org-tw.html",
+      "slug": "2026-06-16-goodshepherd-org-tw",
+      "lang": "zh",
+      "title": "防詐提醒｜小心假交友、真投資詐騙",
+      "description": "goodshepherd.org.tw 最近提醒，現在有一種把「交友」跟「投資」綁在一起的詐騙手法。詐騙者會先在社交平台經營虛擬關係，等對方信任後，再誘導參與投資計畫，把原本的交友目的變成騙錢的陷阱。",
+      "date": "2026-06-16",
+      "dateIso": "2026-06-16T07:00:41+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-16-goodshepherd-org-tw.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-15-taisounds.html",
       "slug": "2026-06-15-taisounds",
