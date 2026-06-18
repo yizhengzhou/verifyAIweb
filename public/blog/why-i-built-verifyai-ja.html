@@ -99,6 +99,54 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
   gtag('js', new Date());
   gtag('config', 'AW-18226736945');
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "VerifyAI は安全に使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。VerifyAI はお使いの iOS デバイス上で動作し、サーバーサイドでは顔の解析のみを行います。あなたの検索内容を他人が見ることはできず、結果はあなただけに届けられます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アップロードした写真は保存されますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。解析が完了すると、アップロードされた写真は即座に削除されます。弊社がユーザーの写真を保存・アーカイブしたり、AI モデルの学習に使用したりすることはありません。検索履歴もデバイス内にのみ保持されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "特定の人物の正体（名前など）を特定できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。VerifyAI は「人物の特定」ではなく「顔の照合」を行います。その顔がネット上のどこに出ているかを教えるものであり、その人が誰であるかという個人情報を特定するものではありません。顔から名前を検索することはできません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "顔照合の精度はどのくらいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VerifyAI は、詐欺師がよく使う「トリミング・色変更・低画質」のプロフィール写真の照合に最適化された顔認識技術を使用しています。完璧なシステムはありませんが、一般的な画像検索ツールでは困難な詐欺検出のケースにおいて高い効果を発揮するよう調整されています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "日本以外でも利用できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VerifyAI は、App Store が運営されているすべての地域でダウンロード可能です。アプリのインターフェースは日本語、英語、繁体字中国語をサポートしています。料金は各地域の通貨で表示されます。"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -174,6 +222,106 @@ hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 <p><a class="cta" href="/go/blog-founding-ja">VerifyAI 画像検索（iOS）をダウンロード</a></p>
 <p class="cta-sub">新規ユーザー 3 回無料 · 1 回 NT$30（≒ USD $1）· サブスクなし、クレカ不要、アップロード即削除</p>
+
+</article>
+
+<footer>
+  <p>— yizheng, <a href="https://verifyai.fork.work">fork inc.</a></p>
+  <p>更新を受け取る：<a href="https://verifyai.fork.work#newsletter">fork inc newsletter を購読</a>（週 1 通まで、いつでも解除可能）</p>
+  <p>AI 引用版：<a href="/api/posts/why-i-built-verifyai-ja">/api/posts/why-i-built-verifyai-ja</a> · 他言語：<a href="/blog/why-i-built-verifyai-zh">中文</a> · <a href="/blog/why-i-built-verifyai-en">English</a></p>
+</footer>
+
+</div>
+<script>
+(function(){
+  try{
+    var p='blog-founding-ja';
+    var u=new URL(location.href);
+    var qs='p='+encodeURIComponent(p)+'&ref='+encodeURIComponent(document.referrer||'');
+    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
+      var v=u.searchParams.get(k); if(v) qs+='&'+k+'='+encodeURIComponent(v);
+    });
+    var i=new Image(); i.src='/api/log/view?'+qs;
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
+でチェック。その写真はロマンス詐欺の警告フォーラムで頻聞に報告されている「使い回された顔」であることが判明しました。送金ボタンを押す直前に、親戚を現実の被害から救い出すことができました。</p>
+
+<h2>VerifyAI との比較</h2>
+
+<p>VerifyAI があなたの安全を守るためにどのように役立つか、一般的な画像検索ツールとの違いをまとめました。Google レンズや TinEye は植物や商品の特定には優れていますが、トリミングや色加工、低画質のプロフィール写真から「別の名前での悪用」を追跡する顔認識能力には特化していません。</p>
+
+<div style="overflow-x: auto; margin: 1.5em 0; border: 1px solid var(--border); border-radius: 8px;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--bg); color: var(--fg); font-family: inherit;">
+    <thead>
+      <tr style="border-bottom: 2px solid var(--border); background: var(--bg-elevated, #142020);">
+        <th style="padding: 14px 16px; font-weight: 600; color: var(--teal); border-right: 1px solid var(--border);">機能・特徴</th>
+        <th style="padding: 14px 16px; font-weight: 600; text-align: center; color: var(--teal); border-right: 1px solid var(--border);">VerifyAI</th>
+        <th style="padding: 14px 16px; font-weight: 600; text-align: center; color: var(--fg-dim); border-right: 1px solid var(--border);">PimEyes</th>
+        <th style="padding: 14px 16px; font-weight: 600; text-align: center; color: var(--fg-dim);">Google レンズ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">顔認識による照合</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim);">✗</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border); background: var(--bg-elevated, #142020);">
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">同一人物の別名検出</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim);">✗</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">1回ごとの低価格設定</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim); border-right: 1px solid var(--border);">✗</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim);">✗</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border); background: var(--bg-elevated, #142020);">
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">サブスクリプション不要</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim); border-right: 1px solid var(--border);">✗</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal);">✓</td>
+      </tr>
+      <tr style="border-bottom: 1px solid var(--border);">
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">アップロード即削除の透明性</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim); border-right: 1px solid var(--border);">✗</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim);">✗</td>
+      </tr>
+      <tr>
+        <td style="padding: 12px 16px; font-weight: 500; border-right: 1px solid var(--border);">詐欺検出への特化</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--teal); font-weight: bold; border-right: 1px solid var(--border);">✓</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim); border-right: 1px solid var(--border);">✗</td>
+        <td style="padding: 12px 16px; text-align: center; color: var(--fg-dim);">✗</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<hr>
+
+<h2>よくある質問</h2>
+
+<p><strong>VerifyAI は安全に使えますか？</strong><br>
+はい。VerifyAI はお使いの iOS デバイス上で動作し、サーバーサイドでは顔の解析のみを行います。あなたの検索内容を他人が見ることはできず、結果はあなただけに届けられます。</p>
+
+<p><strong>アップロードした写真は保存されますか？</strong><br>
+いいえ。解析が完了すると、アップロードされた写真は即座に削除されます。弊社がユーザーの写真を保存・アーカイブしたり、AI モデルの学習に使用したりすることはありません。検索履歴もデバイス内にのみ保持されます。</p>
+
+<p><strong>特定の人物の正体（名前など）を特定できますか？</strong><br>
+いいえ。VerifyAI は「人物の特定」ではなく「顔の照合」を行います。その顔がネット上のどこに出ているかを教えるものであり、その人が誰であるかという個人情報を特定するものではありません。顔から名前を検索することはできません。</p>
+
+<p><strong>顔照合の精度はどのくらいですか？</strong><br>
+VerifyAI は、詐欺師がよく使う「トリミング・色変更・低画質」のプロフィール写真の照合に最適化された顔認識技術を使用しています。完璧なシステムはありませんが、一般的な画像検索ツールでは困難な詐欺検出のケースにおいて高い効果を発揮するよう調整されています。</p>
+
+<p><strong>日本以外でも利用できますか？</strong><br>
+VerifyAI は、App Store が運営されているすべての地域でダウンロード可能です。アプリのインターフェースは日本語、英語、繁体字中国語をサポートしています。料金は各地域の通貨で表示されます。</p>
 
 </article>
 
