@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-18T23:00:36.663Z",
+  "generated_at": "2026-06-19T23:00:34.728Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-20-udn.html",
+      "slug": "2026-06-20-udn",
+      "lang": "zh",
+      "title": "橘世代／【陪家人拆「詐」彈】長輩內心孤獨感 被騙的心理破口",
+      "description": "橘世代／【陪家人拆「詐」彈】長輩內心孤獨感 被騙的心理破口 UDN",
+      "date": "2026-06-20",
+      "dateIso": "2026-06-20T07:00:34+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-20-udn.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-19-facebook-com-01j-300-1.html",
       "slug": "2026-06-19-facebook-com-01j-300-1",
@@ -10,6 +21,28 @@
       "date": "2026-06-19",
       "dateIso": "2026-06-19T07:00:36+08:00",
       "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-19-facebook-com-01j-300-1.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/ja/daily/2026-06-19-ai-deepfake-romance-scam.html",
+      "slug": "2026-06-19-ai-deepfake-romance-scam",
+      "lang": "ja",
+      "title": "AI生成の偽顔写真があなたの心とお金を奪う手口",
+      "description": "詐欺グループがAI顔交換ツールで偽の自撮りや身分証明書を作成し、マッチングアプリで被害者を騙す手口が急増。AI生成の偽顔を見分ける3つのポイントと自己防衛策を解説。",
+      "date": "2026-06-19",
+      "dateIso": "2026-06-19T00:00:00+09:00",
+      "url": "https://verifyai.fork.work/blog/ja/daily/2026-06-19-ai-deepfake-romance-scam.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-19-ai-deepfake-romance-scam.html",
+      "slug": "2026-06-19-ai-deepfake-romance-scam",
+      "lang": "zh",
+      "title": "AI 換臉照片如何騙走你的心和錢",
+      "description": "詐騙集團利用 AI 換臉工具生成假照片、假身分證甚至假視訊通話，讓傳統反詐手段逐漸失效。了解如何辨識 AI 生成的假臉，保護自己不落入交友詐騙陷阱。",
+      "date": "2026-06-19",
+      "dateIso": "2026-06-19T00:00:00+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-19-ai-deepfake-romance-scam.html",
       "legacy": false
     },
     {
