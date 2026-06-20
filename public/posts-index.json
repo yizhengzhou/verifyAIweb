@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-19T23:00:34.728Z",
+  "generated_at": "2026-06-20T01:48:23.885Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-20-daily.html",
+      "slug": "2026-06-20-daily",
+      "lang": "zh",
+      "title": "畢業季玉警提醒學子反詐防毒與交友陷阱",
+      "description": "畢業季到了，玉警特別提醒畢業生要小心詐騙。這次提醒的重點在於「防毒」和「交友」這兩類陷阱，希望即將進入社會或轉換環境的年輕人，在面對網路資訊和社交互動時能多留心。",
+      "date": "2026-06-20",
+      "dateIso": "2026-06-20T09:48:23+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-20-daily.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-20-udn.html",
       "slug": "2026-06-20-udn",
