@@ -4,7 +4,7 @@ import Newsletter from './Newsletter'
 import { getAppStoreUrl } from '../utils/getAppStoreUrl'
 
 export default function Footer() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
 
   return (
     <footer className="footer">
@@ -35,7 +35,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href={getAppStoreUrl()} target="_blank" rel="noopener noreferrer">
+              <a href={getAppStoreUrl(lang)} target="_blank" rel="noopener noreferrer">
                 {t('footer.product.changelog')}
               </a>
             </li>

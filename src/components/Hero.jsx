@@ -1,17 +1,22 @@
 import { useI18n } from '../context/I18nContext'
 import { getAppStoreUrl } from '../utils/getAppStoreUrl'
+import PipelineAnimation from './PipelineAnimation'
 
 export default function Hero() {
-  const { t } = useI18n()
+  const { t, lang } = useI18n()
+  const pipelineLocale = t('pipeline')
 
   return (
     <div className="hero">
+      {/* Pipeline animation background */}
+      {pipelineLocale && <PipelineAnimation locale={pipelineLocale} />}
+
       <div className="hero-container">
         <div className="hero-big-text">VerifyAI</div>
         <p className="hero-long-description">{t('hero.description')}</p>
         <div className="cta-buttons">
           <a
-            href={getAppStoreUrl()}
+            href={getAppStoreUrl(lang)}
             className="btn btn-primary btn-round"
             target="_blank"
             rel="noopener noreferrer"

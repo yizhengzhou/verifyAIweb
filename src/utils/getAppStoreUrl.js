@@ -36,8 +36,8 @@ const LANG_TO_COUNTRY = {
   'vi': 'vn',
 }
 
-export function getAppStoreUrl() {
-  const lang = navigator.language || (navigator.languages && navigator.languages[0]) || 'en'
-  const country = LANG_TO_COUNTRY[lang] || LANG_TO_COUNTRY[lang.split('-')[0]] || 'us'
+export function getAppStoreUrl(lang) {
+  const effectiveLang = lang || navigator.language || (navigator.languages && navigator.languages[0]) || 'en'
+  const country = LANG_TO_COUNTRY[effectiveLang] || LANG_TO_COUNTRY[effectiveLang.split('-')[0]] || 'us'
   return `https://apps.apple.com/${country}/app/id${APP_ID}`
 }

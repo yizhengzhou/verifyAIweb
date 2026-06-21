@@ -37,14 +37,14 @@ export default function Campaign() {
   }
 
   function copyLink() {
-    navigator.clipboard.writeText(getAppStoreUrl()).then(() => {
+    navigator.clipboard.writeText(getAppStoreUrl(lang)).then(() => {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     })
   }
 
   function goToApp() {
-    window.open(getAppStoreUrl(), '_blank', 'noopener')
+    window.open(getAppStoreUrl(lang), '_blank', 'noopener')
   }
 
   return (
