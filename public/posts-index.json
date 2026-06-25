@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-24T23:00:22.300Z",
+  "generated_at": "2026-06-25T23:00:34.076Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-26-more-news.html",
+      "slug": "2026-06-26-more-news",
+      "lang": "zh",
+      "title": "假交友真詐騙 驚覺有異機警求證防止遭詐",
+      "description": "《墨新聞-MORE News》報導了一起典型的「假交友」詐騙。這次受害者反應很快，在互動過程中感覺到不對勁，立刻停下來求證，最後成功守住錢包，沒有造成損失。",
+      "date": "2026-06-26",
+      "dateIso": "2026-06-26T07:00:34+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-26-more-news.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-25-yahoo-6.html",
       "slug": "2026-06-25-yahoo-6",
