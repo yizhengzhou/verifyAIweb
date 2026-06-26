@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-25T23:00:34.076Z",
+  "generated_at": "2026-06-26T23:00:53.658Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-27-daily.html",
+      "slug": "2026-06-27-daily",
+      "lang": "zh",
+      "title": "看看有你住的地方嗎？加州多城市 易陷網路交友詐騙",
+      "description": "世界新聞網報導，美國加州多個城市最近出現了嚴重的網路交友詐騙。詐騙者通常在交友平台上物色目標，先讓對方在情感上產生依賴，隨後才設下陷阱。",
+      "date": "2026-06-27",
+      "dateIso": "2026-06-27T07:00:53+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-27-daily.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-26-more-news.html",
       "slug": "2026-06-26-more-news",
