@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-26T23:00:53.658Z",
+  "generated_at": "2026-06-27T23:00:54.227Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-28-udn.html",
+      "slug": "2026-06-28-udn",
+      "lang": "zh",
+      "title": "好控制、外表無害 老人遭詐團利用",
+      "description": "根據 UDN 的報導，最近出現了一種新的詐騙手法。詐騙集團不再只是把長輩當成被騙的對象，反而將他們當成工具。他們會挑選性格溫順、看起來沒有威脅感且容易被掌控的長者，誘導他們參與詐騙流程，讓長輩在不知情的情況下，成了詐騙鏈條中的一環。",
+      "date": "2026-06-28",
+      "dateIso": "2026-06-28T07:00:54+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-28-udn.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-27-daily.html",
       "slug": "2026-06-27-daily",
