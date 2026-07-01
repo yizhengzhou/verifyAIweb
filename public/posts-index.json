@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-06-30T23:00:46.152Z",
+  "generated_at": "2026-07-01T23:00:34.848Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-02-nownews-400.html",
+      "slug": "2026-07-02-nownews-400",
+      "lang": "zh",
+      "title": "詐騙新招！「表弟」辦理香港返台定居資金遭卡　婦籌400應急",
+      "description": "根據 NOWnews 今日新聞報導，最近出現一種新型詐騙。一名婦女接到自稱是「表弟」的人聯繫，對方說自己正辦理從香港回台灣定居，但資金調度出問題被卡住了。婦女為了幫忙應急，籌集了 400 萬元匯過去，結果發現被騙。",
+      "date": "2026-07-02",
+      "dateIso": "2026-07-02T07:00:34+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-07-02-nownews-400.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-01-20.html",
       "slug": "2026-07-01-20",
@@ -21,6 +32,39 @@
       "date": "2026-06-30",
       "dateIso": "2026-06-30T07:00:32+08:00",
       "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-30-nownews-28-2-8.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-06-29-elderly-romance-scam-zh.html",
+      "slug": "2026-06-29-elderly-romance-scam-zh",
+      "lang": "zh",
+      "title": "老翁深陷網戀詐騙險失二十萬 士林警即時攔阻保住老本",
+      "description": "七十歲陳伯在社群平台認識自稱日本的「櫻子」，陷入網戀投資詐騙險匯二十萬，士林警即時攔阻保住老本。",
+      "date": "2026-06-29",
+      "dateIso": "2026-06-29T20:22:00+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-06-29-elderly-romance-scam-zh.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/en/daily/2026-06-29-elderly-romance-scam-en.html",
+      "slug": "2026-06-29-elderly-romance-scam-en",
+      "lang": "en",
+      "title": "Elderly Man Nearly Loses NT$200K to Online Romance Scam, Shilin Police Intervene to Save His Savings",
+      "description": "Mr. Chen, 70, met someone claiming to be",
+      "date": "2026-06-29",
+      "dateIso": "2026-06-29T20:22:00+08:00",
+      "url": "https://verifyai.fork.work/blog/en/daily/2026-06-29-elderly-romance-scam-en.html",
+      "legacy": false
+    },
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/ja/daily/2026-06-29-elderly-romance-scam-ja.html",
+      "slug": "2026-06-29-elderly-romance-scam-ja",
+      "lang": "ja",
+      "title": "70代男性、SNS恋愛詐欺で20万円を失いかける 士林警察が即時阻止",
+      "description": "70代の陳さんがSNSで日本人を名乗る「桜子」と知り合い、恋愛投資詐欺に遭いかけて20万円を送金しそうになったが、士林警察が即時阻止して老後の資金を守った。",
+      "date": "2026-06-29",
+      "dateIso": "2026-06-29T20:22:00+08:00",
+      "url": "https://verifyai.fork.work/blog/ja/daily/2026-06-29-elderly-romance-scam-ja.html",
       "legacy": false
     },
     {
