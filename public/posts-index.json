@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-07-07T23:01:07.909Z",
+  "generated_at": "2026-07-08T23:00:31.910Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-09-daily.html",
+      "slug": "2026-07-09-daily",
+      "lang": "zh",
+      "title": "假交友誘購遊戲點數 民族警即時攔阻愛情詐騙",
+      "description": "台灣新聞雲報最近報導了一起交友詐騙。詐騙者先偽裝成交友對象，在建立感情後，誘導對方購買遊戲點數。幸好民族警察及時發現異狀並介入，成功攔截，避免了金錢損失。",
+      "date": "2026-07-09",
+      "dateIso": "2026-07-09T07:00:31+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-07-09-daily.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-08-cna-36-2148.html",
       "slug": "2026-07-08-cna-36-2148",
