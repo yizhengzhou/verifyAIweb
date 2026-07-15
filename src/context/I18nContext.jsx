@@ -1,31 +1,67 @@
-import { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import { createContext, useContext, useState, useEffect, useCallback, useRef } from 'react'
 
 const I18nContext = createContext()
 
 const SUPPORTED_LANGUAGES = ['zh-TW', 'en', 'ja', 'ko']
 
-function detectLanguage() {
+const COUNTRY_LANG_MAP = {
+  TW: 'zh-TW', HK: 'zh-TW', MO: 'zh-TW',
+  JP: 'ja',
+  KR: 'ko',
+}
+
+function getBrowserLang() {
+  const b = navigator.language || navigator.userLanguage || ''
+  if (b.startsWith('zh')) return 'zh-TW'
+  if (b.startsWith('ja')) return 'ja'
+  if (b.startsWith('ko')) return 'ko'
+  return 'en'
+}
+
+async function detectLangFromIP() {
+  const controller = new AbortController()
+  const id = setTimeout(() => controller.abort(), 3000)
+  try {
+    const res = await fetch('https://get.geojs.io/v1/ip/country.json', { signal: controller.signal })
+    const { country } = await res.json()
+    clearTimeout(id)
+    return COUNTRY_LANG_MAP[country] ?? null
+  } catch {
+    clearTimeout(id)
+    return null
+  }
+}
+
+function getInitialLang() {
   const params = new URLSearchParams(window.location.search)
   const urlLang = params.get('lang')
   if (urlLang && SUPPORTED_LANGUAGES.includes(urlLang)) {
     localStorage.setItem('preferredLanguage', urlLang)
     return urlLang
   }
-
   const saved = localStorage.getItem('preferredLanguage')
   if (saved && SUPPORTED_LANGUAGES.includes(saved)) return saved
-
-  const browser = navigator.language || navigator.userLanguage || ''
-  if (browser.startsWith('zh')) return 'zh-TW'
-  if (browser.startsWith('ja')) return 'ja'
-  if (browser.startsWith('ko')) return 'ko'
-  return 'en'
+  return getBrowserLang()
 }
 
 export function I18nProvider({ children }) {
-  const [lang, setLang] = useState(detectLanguage)
+  const [lang, setLang] = useState(getInitialLang)
   const [translations, setTranslations] = useState({})
   const [ready, setReady] = useState(false)
+  const geoFired = useRef(false)
+
+  useEffect(() => {
+    if (geoFired.current) return
+    const saved = localStorage.getItem('preferredLanguage')
+    if (saved && SUPPORTED_LANGUAGES.includes(saved)) return
+    geoFired.current = true
+
+    detectLangFromIP().then((ipLang) => {
+      const resolved = ipLang ?? getBrowserLang()
+      localStorage.setItem('preferredLanguage', resolved)
+      setLang(resolved)
+    })
+  }, [])
 
   useEffect(() => {
     let cancelled = false

@@ -29,6 +29,41 @@
       gtag('event', 'conversion', {'send_to': 'AW-18226736945/tHpKCJrLtr0cELHel_ND'});
       return true;
     }
+    function trackPaidCtaClick(url) {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var campaignId = params.get('campaign_id') || params.get('utm_campaign') || 'none';
+        
+        // 1. 發送 click_app_store 事件
+        gtag('event', 'click_app_store', {
+          'cta_id': 'rt_ad_us_shorts',
+          'cta_location': 'inline',
+          'page_type': 'ad',
+          'page_path': window.location.pathname,
+          'language': 'en',
+          'destination_app_id': '6754511420',
+          'campaign_id': campaignId
+        });
+        
+        // 2. 發送 Google Ads conversion 并聯呼叫
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18226736945/tHpKCJrLtr0cELHel_ND',
+          'value': 1.0,
+          'currency': 'USD'
+        });
+
+        // 3. Debug 模式輸出
+        if (window.localStorage && window.localStorage.getItem('debug') === 'verifyai') {
+          console.log('[VerifyAI Tracking] Paid CTA Clicked (click_app_store & conversion)', {
+            cta_id: 'rt_ad_us_shorts',
+            campaign_id: campaignId
+          });
+        }
+      } catch (err) {
+        console.error('[VerifyAI Tracking] Error in paid CTA tracking:', err);
+      }
+      return true; // Tracking failure 不得阻止使用者跳轉
+    }
   </script>
 
   <style>
@@ -150,7 +185,7 @@
     </ul>
 
     <a class="cta" href="https://apps.apple.com/us/app/verifyai-image-search/id6754511420"
-       onclick="return gtag_report_conversion(this.href);"
+       onclick="return trackPaidCtaClick(this.href);"
        target="_blank" rel="noopener noreferrer">
       Download on the App Store
     </a>

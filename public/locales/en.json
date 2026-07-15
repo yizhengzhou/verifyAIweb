@@ -215,11 +215,11 @@
       "hint": "Get VerifyAI updates and online-scam awareness tips. Monthly. Unsubscribe anytime.",
       "placeholder": "Your email",
       "button": "Subscribe",
-      "submitting": "Subscribing\u2026",
+      "submitting": "Subscribing…",
       "success": "Thanks for subscribing! We'll be in touch.",
       "error": "Subscription failed. Please try again or email us."
     },
-    "copyright": "\u00a9 2026 VerifyAI. All rights reserved."
+    "copyright": "© 2026 VerifyAI. All rights reserved."
   },
   "termsOfService": {
     "pageTitle": "Terms of Service",
@@ -415,5 +415,50 @@
         ]
       }
     ]
+  },
+  "pipeline": {
+    "col_ext": "External Search",
+    "col_int": "Internal Verification",
+    "ext": [
+      {
+        "label": "Google Image Search",
+        "sub": "Scans the web for similar images"
+      },
+      {
+        "label": "Google Lens",
+        "sub": "Finds exact photo matches"
+      },
+      {
+        "label": "Yandex",
+        "sub": "Covers Eastern Europe & Russia sources"
+      },
+      {
+        "label": "Shutterstock",
+        "sub": "Detects stock photo origins"
+      },
+      {
+        "label": "SightEngine AI",
+        "sub": "Identifies AI-generated images"
+      }
+    ],
+    "int": [
+      {
+        "label": "Photo Fingerprint PDQ",
+        "sub": "Resists compression, filters & rotation"
+      },
+      {
+        "label": "Double Check dHash",
+        "sub": "Prevents background-similarity errors"
+      },
+      {
+        "label": "Local Features SIFT",
+        "sub": "Recognizes crops & geometric transforms"
+      },
+      {
+        "label": "Face Verification ArcFace",
+        "sub": "AI matches whether it's the same face"
+      }
+    ],
+    "footer": "External Search × Internal Verification → Cross Check → Risk Assessment"
   }
 }

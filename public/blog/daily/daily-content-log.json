@@ -1,43 +1,12 @@
 {
-  "version": 1,
-  "articles": [
-    {
-      "date": "2026-06-09",
-      "slug": "2026-06-09-cna",
-      "type": "A",
-      "source_id": "TW-04",
-      "source_url": "",
-      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "status": "published",
-      "humanizer_applied": false,
-      "note": "pipeline v3.1 之前發布，slug 從 cna-daily 更正為 cna",
-      "fingerprint": "bank_intervention-elder_victim-romance_scam"
-    },
-    {
-      "date": "2026-06-10",
-      "slug": "2026-06-10-cna",
-      "type": "A",
-      "source_id": "TW-04",
-      "source_url": "",
-      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "status": "published",
-      "humanizer_applied": false,
-      "note": "pipeline v3.1 發布，同源新聞重用（去重邏輯尚未上線）",
-      "fingerprint": "bank_intervention-elder_victim-romance_scam"
-    },
-    {
-      "date": "2026-06-11",
-      "slug": "2026-06-11-cna",
-      "type": "A",
-      "source_id": "TW-04",
-      "source_url": "",
-      "title_zh": "台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙",
-      "fingerprint": "bank_intervention-elder_victim-romance_scam",
-      "status": "published",
-      "humanizer_applied": true,
-      "note": "pipeline v3.1 / restored during multilingual pipeline e2e"
-    }
-  ],
+  "version": 2,
+  "workflow": {
+    "writer": "agent",
+    "reviewer": "agent",
+    "telegram": "required",
+    "publish_rule": "writer + reviewer + telegram must all be approved before publish"
+  },
+  "articles": [],
   "type_b_used": [
     {
       "topic_id": "B-01",

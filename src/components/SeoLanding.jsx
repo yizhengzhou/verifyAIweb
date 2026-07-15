@@ -1,8 +1,10 @@
+import { useEffect } from 'react'
 import { ArrowRight, Check, Search, ShieldCheck } from 'lucide-react'
 import { useI18n } from '../context/I18nContext'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { getAppStoreUrl } from '../utils/getAppStoreUrl'
+import { trackAppStoreClick, trackEvent, parseSourceGroup } from '../utils/tracking'
 
 const copy = {
   en: {
@@ -49,7 +51,16 @@ const faqs = [
 export default function SeoLanding() {
   const { lang } = useI18n()
   const c = copy[lang] || copy.en
-  const appUrl = getAppStoreUrl(lang)
+  const heroAppUrl = getAppStoreUrl(lang, 'rt_home_hero')
+  const bottomAppUrl = getAppStoreUrl(lang, 'rt_home_bottom')
+
+  useEffect(() => {
+    trackEvent('view_landing', {
+      page_variant: 'control',
+      language: lang,
+      source_group: parseSourceGroup(document.referrer, window.location.search)
+    });
+  }, [lang]);
   return <>
     <Navbar />
     <main className="seo-landing">
@@ -58,7 +69,7 @@ export default function SeoLanding() {
           <p className="seo-eyebrow">{c.eyebrow}</p>
           <h1>{c.title.split('\n').map((line, i) => <span key={line}>{line}{i === 0 && <br />}</span>)}</h1>
           <p className="seo-lede">{c.intro}</p>
-          <div className="seo-actions"><a className="seo-button primary" href={appUrl} target="_blank" rel="noreferrer">{c.primary}<ArrowRight size={18}/></a><a className="seo-button secondary" href="#howItWorks">{c.secondary}</a></div>
+          <div className="seo-actions"><a className="seo-button primary" href={heroAppUrl} onClick={() => trackAppStoreClick('rt_home_hero', 'hero', 'home', lang)} target="_blank" rel="noreferrer">{c.primary}<ArrowRight size={18}/></a><a className="seo-button secondary" href="#howItWorks">{c.secondary}</a></div>
           <p className="seo-note"><Check size={16}/>{c.note}</p>
         </div>
         <div className="seo-hero-product" aria-label="VerifyAI iPhone app">
@@ -71,7 +82,7 @@ export default function SeoLanding() {
       <section id="howItWorks" className="seo-section how-section"><div className="section-intro"><p className="seo-eyebrow">Three clear steps</p><h2>{c.howTitle}</h2></div><div className="steps-grid">{c.steps.map(([n,t,d]) => <article key={n}><span>{n}</span>{n === '01' ? <Search/> : n === '02' ? <ShieldCheck/> : <Check/>}<h3>{t}</h3><p>{d}</p></article>)}</div></section>
       <section id="guides" className="seo-section guides-section"><div className="section-intro"><p className="seo-eyebrow">Search & safety guides</p><h2>{c.guidesTitle}</h2><p>{c.guidesBody}</p></div><div className="guide-grid">{guides.map(([slug,title,desc], i) => <a href={`/guides/${slug}/`} key={slug}><span>Guide {String(i+1).padStart(2,'0')}</span><h3>{title}</h3><p>{desc}</p><b>Read guide <ArrowRight size={16}/></b></a>)}</div></section>
       <section id="faq" className="seo-section seo-faq"><div className="section-intro"><p className="seo-eyebrow">FAQ</p><h2>{c.faqTitle}</h2></div><div>{faqs.map(([q,a,slug]) => <details key={q}><summary>{q}</summary><p>{a}</p><a href={`/guides/${slug}/`}>Learn more <ArrowRight size={15}/></a></details>)}</div></section>
-      <section id="download" className="download-cta"><img src="/app-store/app-icon.png" alt="VerifyAI app icon"/><div><h2>{c.ctaTitle}</h2><p>{c.ctaBody}</p></div><a className="seo-button primary" href={appUrl} target="_blank" rel="noreferrer">{c.primary}<ArrowRight size={18}/></a></section>
+      <section id="download" className="download-cta"><img src="/app-store/app-icon.png" alt="VerifyAI app icon"/><div><h2>{c.ctaTitle}</h2><p>{c.ctaBody}</p></div><a className="seo-button primary" href={bottomAppUrl} onClick={() => trackAppStoreClick('rt_home_bottom', 'bottom', 'home', lang)} target="_blank" rel="noreferrer">{c.primary}<ArrowRight size={18}/></a></section>
     </main>
     <Footer />
   </>

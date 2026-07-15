@@ -415,5 +415,50 @@
         ]
       }
     ]
+  },
+  "pipeline": {
+    "col_ext": "外部検索",
+    "col_int": "内部検証",
+    "ext": [
+      {
+        "label": "Google 画像検索",
+        "sub": "Web上の類似画像をスキャン"
+      },
+      {
+        "label": "Google Lens",
+        "sub": "完全一致する写真を特定"
+      },
+      {
+        "label": "Yandex",
+        "sub": "東欧・ロシアの情報源をカバー"
+      },
+      {
+        "label": "Shutterstock",
+        "sub": "ストックフォト由来を検出"
+      },
+      {
+        "label": "SightEngine AI",
+        "sub": "AI生成画像を識別"
+      }
+    ],
+    "int": [
+      {
+        "label": "写真指紋 PDQ",
+        "sub": "圧縮・フィルター・回転に耐性"
+      },
+      {
+        "label": "二重確認 dHash",
+        "sub": "背景類似による誤判定を防止"
+      },
+      {
+        "label": "局所特徴 SIFT",
+        "sub": "切り抜きや幾何変換も認識"
+      },
+      {
+        "label": "顔認証 ArcFace",
+        "sub": "同一人物かをAI照合"
+      }
+    ],
+    "footer": "外部検索 × 内部検証 → クロスチェック → 総合リスク判定"
   }
 }
