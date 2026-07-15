@@ -7,7 +7,8 @@ Updated: 2026-07-15
 - The live zone already has **Markdown for Agents** enabled. A request to `https://verifyai.fork.work/` with `Accept: text/markdown` returned `content-type: text/markdown` on 2026-07-15.
 - The repository publishes `/llms.txt` and `/llms-full.txt`.
 - `/robots.txt` is served by `functions/robots.txt.js`, explicitly allows major search and AI answer crawlers, and points to the sitemap.
-- The origin now sends `Content-Signal: search=yes, ai-input=yes, ai-train=no`. This invites search indexing and real-time AI answer use while opting out of model training.
+- The origin now sends `Content-Signal: search=yes, ai-input=yes, ai-train=no`. This invites search indexing and real-time AI answer use while opting out of model training on the HTML response.
+- Live verification found that Cloudflare's generated Markdown response currently returns its default `ai-train=yes, search=yes, ai-input=yes` even though the HTML origin response returns `ai-train=no`. This is more permissive and remains AI-discovery-friendly, but it does not match the repository's training preference.
 - The sitemap intentionally prioritizes the homepage, six task-focused guides, policies, and AI-readable files. The old low-value blog is not part of the canonical discovery set.
 
 ## Recommended Cloudflare dashboard settings
@@ -19,7 +20,7 @@ Cloudflare dashboard → select `verifyai.fork.work` zone → **AI Crawl Control
 3. Do not enable a blanket AI crawler block. VerifyAI's goal is discovery and citation.
 4. Open the **Directives** tab after deployment and confirm `/robots.txt` is available and there are no unexpected violations.
 5. Leave Cloudflare's managed training-blocking `robots.txt` disabled unless its generated rules have been reviewed. This project already supplies an intentional, product-specific robots file; managed rules can be prepended and may conflict with the desired allow policy.
-6. If **Content Signals Policy** is shown, confirm the effective policy is `search=yes, ai-input=yes, ai-train=no`. The origin header is authoritative for Markdown for Agents responses.
+6. If **Content Signals Policy** is shown, set the desired effective policy to `search=yes, ai-input=yes, ai-train=no`. Cloudflare documents the origin header as authoritative, but the live Markdown conversion returned Cloudflare's permissive default during the 2026-07-15 verification; recheck this value in the dashboard after any Cloudflare update.
 
 ## Why these content signals
 
@@ -44,13 +45,14 @@ curl -sS 'https://verifyai.fork.work/llms.txt'
 curl -sS 'https://verifyai.fork.work/sitemap.xml'
 ```
 
-Expected homepage response headers:
+Expected HTML homepage response header:
 
 ```text
-content-type: text/markdown; charset=utf-8
 content-signal: search=yes, ai-input=yes, ai-train=no
 vary: Accept
 ```
+
+The Markdown response should have `content-type: text/markdown`. As of the verification date, its effective `content-signal` is `ai-train=yes, search=yes, ai-input=yes`; changing that transformed-response policy requires a Cloudflare dashboard/API review and is not required for AI discovery or citations.
 
 Also verify all six guide URLs return HTTP 200 and that the Markdown response contains the new homepage headline rather than the retired blog-first content.
 
