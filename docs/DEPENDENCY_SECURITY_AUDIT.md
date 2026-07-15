@@ -21,7 +21,7 @@ The dependency update is safe to deploy. A separate pre-existing content-signal 
 - Direct production dependencies: React, React DOM, React Router DOM, Framer Motion, and Lucide React.
 - Direct build dependencies: Vite and `@vitejs/plugin-react`.
 - `package.json` did not require a change because its existing caret ranges already admit all patched versions.
-- `.github/workflows/deploy.yml` already uses `actions/checkout@v4`, `actions/setup-node@v4`, and Node 20. No workflow change was made. The workflow's selected Node build version is distinct from the JavaScript runtime used internally by a GitHub Action; no repository-side action upgrade was indicated by the inspected workflow.
+- `.github/workflows/deploy.yml` originally used `actions/checkout@v4` and `actions/setup-node@v4` with Node 20 for the site build. The first post-patch workflow succeeded but reported that both v4 actions still target the deprecated Node 20 action runtime and were being forced onto Node 24. The actions were therefore minimally updated to v5, whose official release notes identify the Node 24 runtime change. The site's explicit `node-version: 20` remains unchanged because it controls the project build, not the action runtime.
 
 ## Findings and reachability
 
@@ -52,7 +52,7 @@ The dependency update is safe to deploy. A separate pre-existing content-signal 
   - `rollup` `4.57.1` -> `4.62.2`
   - `vite` `6.4.1` -> `6.4.3`
 - `package.json`: unchanged.
-- GitHub Actions workflow: unchanged.
+- GitHub Actions workflow: updated `actions/checkout@v4` -> `@v5` and `actions/setup-node@v4` -> `@v5`; retained `node-version: 20` and the existing npm cache setting.
 - No forced or breaking dependency upgrade was used.
 
 ## Deferred findings
