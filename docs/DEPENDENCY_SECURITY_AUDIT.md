@@ -77,9 +77,9 @@ The following unrelated deployment-policy mismatch is deferred to a separate cha
 - Homepage production artifact contains title, canonical link, `SoftwareApplication` JSON-LD, and App Store app ID `6754511420`.
 - All six generated guide artifacts contain a canonical link and `HowTo` JSON-LD.
 
-### Live baseline checks before dependency deployment
+### Live baseline and post-deployment checks
 
-Cache-busting query used: `?audit=20260715`.
+Baseline cache-busting query: `?audit=20260715`. Post-deployment cache-busting query: `?audit=d4a42fd`.
 
 - Homepage: HTTP 200.
 - All six `/guides/` pages: HTTP 200.
@@ -88,13 +88,14 @@ Cache-busting query used: `?audit=20260715`.
 - App Store CTA resolves to app ID `6754511420` in the retrieved homepage content.
 - `Accept: text/markdown`: HTTP 200, `content-type: text/markdown; charset=utf-8`, and `Vary: Accept`.
 - Content-signal caveat: the live Markdown response returned `ai-train=yes, search=yes, ai-input=yes`; see Deferred findings.
+- The post-deployment homepage referenced `assets/index-BYuiYpqC.js`, matching the clean Vite build from the security commit rather than the earlier cached bundle.
 
 ## Commit, Actions, and deployment status
 
-- Security patch commit: pending isolated commit from the fetched `origin/main` baseline.
-- GitHub Actions workflow: pending security patch push.
-- Cloudflare deployment: pending workflow success and post-deploy propagation.
-- Final live verification of the new dependency commit: pending deployment.
+- Security patch commit: `d4a42fd0374dabfea6a727e955636b8c19362d3c` (`Audit and patch npm dependencies`).
+- GitHub Actions workflow: [Deploy to Cloudflare Pages run 29419930333](https://github.com/yizhengzhou/verifyAIweb/actions/runs/29419930333), completed with conclusion `success`.
+- Cloudflare deployment: propagated successfully; the cache-busted homepage served the clean-build asset from the security commit.
+- Final live verification: passed for the homepage, all six guides, app icon, five screenshots, sitemap, robots file, and both llms files. The documented content-signal mismatch remains unchanged and deferred.
 
 ## Manual follow-up
 
