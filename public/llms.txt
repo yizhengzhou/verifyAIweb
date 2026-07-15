@@ -1,50 +1,29 @@
-# VerifyAI
+# VerifyAI Image Search
 
-> Reverse-image search for face photos; scam prevention notes for humans and AI crawlers.
+> VerifyAI is an iPhone reverse image search app for checking profile pictures, tracing image sources, and reviewing visual evidence before making an online trust decision.
 
-## Daily Scam Reports
+## Product
 
-- [2026-06-29 老翁深陷網戀詐騙險失20萬元 士林警即時攔阻保住老本](https://verifyai.fork.work/blog/zh/daily/2026-06-29-yahoo-20.html): 老翁深陷網戀詐騙險失20萬元 士林警即時攔阻保住老本 Yahoo新聞
-- [2026-06-28 好控制、外表無害 老人遭詐團利用](https://verifyai.fork.work/blog/zh/daily/2026-06-28-udn.html): 根據 UDN 的報導，最近出現了一種新的詐騙手法。詐騙集團不再只是把長輩當成被騙的對象，反而將他們當成工具。他們會挑選性格溫順、看起來沒有威脅感且容易被掌控的長者，誘導他們參與詐騙流程，讓長輩在不知情的情況下，成了詐騙鏈條中的一環。
-- [2026-06-27 看看有你住的地方嗎？加州多城市 易陷網路交友詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-27-daily.html): 世界新聞網報導，美國加州多個城市最近出現了嚴重的網路交友詐騙。詐騙者通常在交友平台上物色目標，先讓對方在情感上產生依賴，隨後才設下陷阱。
-- [2026-06-26 假交友真詐騙 驚覺有異機警求證防止遭詐](https://verifyai.fork.work/blog/zh/daily/2026-06-26-more-news.html): 《墨新聞-MORE News》報導了一起典型的「假交友」詐騙。這次受害者反應很快，在互動過程中感覺到不對勁，立刻停下來求證，最後成功守住錢包，沒有造成損失。
-- [2026-06-25 我們該做的都做了！他心死曝光愛情詐騙進化版 專家警告這6句話最危險](https://verifyai.fork.work/blog/zh/daily/2026-06-25-yahoo-6.html): Yahoo 新聞最近報導了一種進化版的愛情詐騙。一名受害者在受損後決定公開經歷，希望提醒更多人。專家分析後發現，如果對方在對話中出現特定的「6 句話」，通常就是危險訊號，代表對方可能在操控你的情感，或是準備誘導你掏錢。
-- [2026-06-24 七旬婦超商ATM前「邊視訊邊發抖」 海巡上士眼尖偕警攔阻190萬](https://verifyai.fork.work/blog/zh/daily/2026-06-24-udn-atm-190.html): 七旬婦超商ATM前「邊視訊邊發抖」 海巡上士眼尖偕警攔阻190萬 UDN
-- [2026-06-23 近百老翁都不放過！陷網戀詐騙欲匯400萬警銀聯手即時攔阻成功](https://verifyai.fork.work/blog/zh/daily/2026-06-23-pchome-online-400.html): 最近新聞報導了一件令人心驚的事。一名年近百歲的老翁陷入網戀詐騙，在對方的誘導下，差點匯出 400 萬元新台幣。幸好警方和銀行及時攔截，在轉帳前成功擋下這筆款項，才避免了財產損失。
-- [2026-06-22 影/攜手養老！南港99歲翁網戀匯400萬 警行員阻詐救棺材本](https://verifyai.fork.work/blog/zh/daily/2026-06-22-pchome-online-99-400.html): 影/攜手養老！南港99歲翁網戀匯400萬 警行員阻詐救棺材本 PChome Online 新聞
-- [2026-06-22 七旬婦超商ATM前「邊視訊邊發抖」 海巡上士眼尖偕警攔阻190萬](https://verifyai.fork.work/blog/zh/daily/2026-06-22-udn-atm-190.html): 我會客觀轉述新聞事實，不加入主觀臆測。
-- [2026-06-22 近百老翁都不放過！陷網戀詐騙欲匯400萬 警銀聯手即時攔阻成功](https://verifyai.fork.work/blog/zh/daily/2026-06-22-400.html): 近百老翁都不放過！陷網戀詐騙欲匯400萬 警銀聯手即時攔阻成功 蕃新聞
-- [2026-06-22 稱老公出軌1折拋售Switch2 盜用舊照多人受騙上門撲空](https://verifyai.fork.work/blog/zh/daily/2026-06-22-1-switch2.html): 民視財經網報導了一起網路交易詐騙。詐騙者在平台上聲稱丈夫出軌，因此決定用一折的低價拋售 Switch 2。為了讓買家相信，對方盜用了他人的舊照片當作證明。許多人信以為真並支付了款項，但等到約定時間到達交易地點，才發現對方根本不存在，最後多人受騙且撲空。
-- [2026-06-21 礁警連破兩起詐欺案～投資交友話術騙財2車手落網](https://verifyai.fork.work/blog/zh/daily/2026-06-21-2.html): 礁警連破兩起詐欺案～投資交友話術騙財2車手落網 葛瑪蘭新聞網
-- [2026-06-20 投資300萬可賺1億？大園婦誤信詐騙解定存 警銀合作守住她積蓄](https://verifyai.fork.work/blog/zh/daily/2026-06-20-300-1.html): 桃園大園區一名婦女最近差點被騙。詐騙集團開出「投資 300 萬元可獲利 1 億元」的誇張條件，讓她信以為真，甚至跑去銀行解約定存準備匯款。幸好銀行人員發現異狀，第一時間與警方合作攔截，才幫她守住這筆積蓄。
-- [2026-06-20 畢業季玉警提醒學子反詐防毒與交友陷阱](https://verifyai.fork.work/blog/zh/daily/2026-06-20-daily.html): 畢業季到了，玉警特別提醒畢業生要小心詐騙。這次提醒的重點在於「防毒」和「交友」這兩類陷阱，希望即將進入社會或轉換環境的年輕人，在面對網路資訊和社交互動時能多留心。
-- [2026-06-20 橘世代／【陪家人拆「詐」彈】長輩內心孤獨感 被騙的心理破口](https://verifyai.fork.work/blog/zh/daily/2026-06-20-udn.html): 橘世代／【陪家人拆「詐」彈】長輩內心孤獨感 被騙的心理破口 UDN
-- [2026-06-19 典型的詐騙手法！(#01J) 【這也能信？投資300萬賺1億...婦解除定存要投資 警銀聯手阻詐】 （圖／大園警分局提供）](https://verifyai.fork.work/blog/zh/daily/2026-06-19-facebook-com-01j-300-1.html): 大園警分局最近分享了一件攔截詐騙的案例。一名婦女當時打算解約定存，準備把 300 萬元投入一個號稱「投 300 萬能賺 1 億」的計畫。幸好銀行人員與警方及時介入，發現這是典型的詐騙陷阱，才幫她守住了這筆錢。
-- [2026-06-19 AI生成の偽顔写真があなたの心とお金を奪う手口](https://verifyai.fork.work/blog/ja/daily/2026-06-19-ai-deepfake-romance-scam.html): 詐欺グループがAI顔交換ツールで偽の自撮りや身分証明書を作成し、マッチングアプリで被害者を騙す手口が急増。AI生成の偽顔を見分ける3つのポイントと自己防衛策を解説。
-- [2026-06-19 AI 換臉照片如何騙走你的心和錢](https://verifyai.fork.work/blog/zh/daily/2026-06-19-ai-deepfake-romance-scam.html): 詐騙集團利用 AI 換臉工具生成假照片、假身分證甚至假視訊通話，讓傳統反詐手段逐漸失效。了解如何辨識 AI 生成的假臉，保護自己不落入交友詐騙陷阱。
-- [2026-06-18 愛上詐騙男！新竹妙齡女戀愛腦獻身淪車手…詐團狂騙14人爽撈4000萬](https://verifyai.fork.work/blog/zh/daily/2026-06-18-yahoo-14-4000.html): 愛上詐騙男！新竹妙齡女戀愛腦獻身淪車手…詐團狂騙14人爽撈4000萬 Yahoo新聞
-- [2026-06-17 假投資+假交友詐騙多　屏東執行分署籲牢記3不原則」](https://verifyai.fork.work/blog/zh/daily/2026-06-17-ettoday-3.html): ETtoday 新聞雲近期報導，現在很多詐騙手法將「假投資」與「假交友」結合在一起。屏東執行分署提醒大家，遇到類似情況時，請記得遵守「3不原則」來保護自己。
-- [2026-06-16 防詐提醒｜小心假交友、真投資詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-16-goodshepherd-org-tw.html): goodshepherd.org.tw 最近提醒，現在有一種把「交友」跟「投資」綁在一起的詐騙手法。詐騙者會先在社交平台經營虛擬關係，等對方信任後，再誘導參與投資計畫，把原本的交友目的變成騙錢的陷阱。
-- [2026-06-15 殺豬盤殺成人生勝利組 這國如何養出網戀詐騙情聖「雅虎男孩們」？](https://verifyai.fork.work/blog/zh/daily/2026-06-15-taisounds.html): 《太報 TaiSounds》報導了一群被稱為「雅虎男孩」（Yahoo Boys）的網戀詐騙集團。他們擅長使用「殺豬盤」手法，在網路上營造虛擬的情感連結來獲利。部分參與者靠這招累積了大量財富，在社會上甚至被視為「人生勝利組」。
-- [2026-06-14 中國「同城交友」詐騙案！7000男性被騙1.5億元：驚人套路全曝光](https://verifyai.fork.work/blog/zh/daily/2026-06-14-setn-com-7000-1-5.html): 三立新聞網報導，中國最近揭發了一起大規模的「同城交友」詐騙案。這次受害人數驚人，約有 7,000 名男性被騙，總金額高達 1.5 億元。詐騙集團利用同城交友的偽裝，讓受害者在社交過程中不知不覺陷入金錢陷阱。
-- [2026-06-13 感情詐騙受害者不是笨　一六五勤務隊員透露真實心態](https://verifyai.fork.work/blog/zh/daily/2026-06-13-ettoday.html): ETtoday 新聞雲報導，一六五反詐騙勤務隊的隊員分享了一個觀察：感情詐騙的受害者其實並不笨。他們之所以上當，是因為詐騙者精準地抓住了受害者的心理弱點，讓人在特定的情境下掉進陷阱。
-- [2026-06-12 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-12-cna.html): 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙
-- [2026-06-11 【注意喚起】ロマンス詐欺から投資詐欺へ。28万ドルを失った「豚屠殺詐欺」の手口](https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g3-ja.html): SNSで親密な関係を築いた後、投資へと誘導し多額の資金を奪う「豚屠殺詐欺」の恐ろしい実態と、被害を防ぐための対策を解説します。
-- [2026-06-11 The High Cost of Online Love: Inside a $280K Pig Butchering Scam](https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g3-en.html): Learn how a sophisticated romance scam led one man to lose $280,000 through a calculated &#x27;pig butchering&#x27; scheme.
-- [2026-06-11 從浪漫邂逅到 28 萬美元損失：揭開「殺豬盤」投資騙局的真面目](https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g3-zh.html): 一名男子在網路戀愛中陷入陷阱，被誘導投資最終損失 28 萬美元。讓我們一起分析這類詐騙的運作模式，保護自己的財產安全。
-- [2026-06-11 【注意喚起】人生を狂わせる「豚屠殺（ピッグ・ブッチャリング）」詐欺の手口とは](https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g2-ja.html): テネシー州で警告が出された、ロマンス詐欺とSNS型投資詐欺を組み合わせた巧妙な手口について解説します。
-- [2026-06-11 Beware of &amp;#x27;Pig Butchering&amp;#x27;: Tennessee Warns Residents of Devastating Romance Scams](https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g2-en.html): Tennessee officials are alerting the public about the rise of &#x27;pig butchering&#x27; scams, where fraudsters use romantic manipulation to drain victims&#x27; life savings.
-- [2026-06-11 小心「殺豬盤」浪漫陷阱：從田納西州案例看新型詐騙手法](https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g2-zh.html): 美國田納西州近期發出警訊，提醒民眾警惕以感情為餌的「殺豬盤」詐騙，許多受害者在不知不覺中失去了畢生積蓄。
-- [2026-06-11 【注意喚起】「間違いメール」から始まる巧妙な罠。ベイエリアの男性が100万ドルを失ったロマンス詐欺の手口](https://verifyai.fork.work/blog/ja/daily/2026-06-11-multi-g1-ja.html): SNS型投資詐欺の典型的なパターンである「豚屠殺（Pig Butchering）」の手口を解説。間違いメールをきっかけに信頼を築き、仮想通貨へ誘導する恐ろしい詐欺の実態に迫ります。
-- [2026-06-11 The &amp;#x27;Wrong Number&amp;#x27; Trap: Bay Area Man Loses $1 Million in Pig Butchering Scam](https://verifyai.fork.work/blog/en/daily/2026-06-11-multi-g1-en.html): A cautionary tale of how a simple text message led to a devastating crypto investment loss through a sophisticated romance scam.
-- [2026-06-11 從一則「打錯電話」的訊息開始：揭開百萬美元加密貨幣投資陷阱](https://verifyai.fork.work/blog/zh/daily/2026-06-11-multi-g1-zh.html): 一名灣區男子因收到陌生訊息，在建立情感連結後陷入加密貨幣投資詐騙，損失高達 100 萬美元。讓我們一起分析這類「殺豬盤」的運作邏輯。
-- [2026-06-11 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-11-cna.html): 一名台中婦女最近在網路上交友，與對方發展出親密關係，甚至稱呼對方為「老公」。在詐騙者的誘導下，她前往銀行準備匯款，幸好行員發現情況異常，立刻通知警方到場，才及時攔截這起詐騙，避免財產損失。
-- [2026-06-10 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-10-cna.html): 
-- [2026-06-09 台中婦欲匯款網戀「老公」 警銀聯手攔阻詐騙](https://verifyai.fork.work/blog/zh/daily/2026-06-09-cna.html): 台中一名婦人計畫向網路認識的「老公」匯款，銀行行員察覺異狀通報警方，警銀聯手攔阻成功。本文分析情感綁架的詐騙心理機制，並提供 3 個立即可做的保護建議。
+- [Official website](https://verifyai.fork.work/)
+- [Download VerifyAI on the App Store](https://apps.apple.com/us/app/verifyai-image-search/id6754511420)
+- Platform: iPhone, iOS 15.1 or later
+- Search sources: Google, Yandex, Google Lens, and Shutterstock
+- New users receive three complimentary full searches
 
-## Feeds
+VerifyAI searches public image indexes and organizes likely exact, cropped, stock-photo, and contextual matches. It provides source links so the user can review the evidence.
 
-- [All languages](https://verifyai.fork.work/blog/feed.xml)
-- [zh-Hant](https://verifyai.fork.work/blog/zh/feed.xml)
-- [English](https://verifyai.fork.work/blog/en/feed.xml)
-- [Japanese](https://verifyai.fork.work/blog/ja/feed.xml)
+VerifyAI cannot guarantee a person's identity, prove that an account is genuine, or perfectly classify an AI-generated image. No result may mean that an image is new, private, altered, low quality, or not indexed.
+
+## Guides
+
+- [How to reverse image search on iPhone](https://verifyai.fork.work/guides/reverse-image-search-iphone/)
+- [How to find the original source of an image](https://verifyai.fork.work/guides/find-image-source/)
+- [How to check if a profile picture is fake](https://verifyai.fork.work/guides/check-fake-profile-photo/)
+- [Reverse image search for catfish checks](https://verifyai.fork.work/guides/reverse-image-search-catfish/)
+- [How to spot photos used in romance scams](https://verifyai.fork.work/guides/spot-romance-scam-photos/)
+- [A multi-engine Google Lens alternative for iPhone](https://verifyai.fork.work/guides/google-lens-alternative-iphone/)
+
+## Policies
+
+- [Privacy](https://verifyai.fork.work/privacy)
+- [Terms](https://verifyai.fork.work/terms)

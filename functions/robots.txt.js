@@ -4,12 +4,13 @@
 // the static file pipeline. Function responses skip CF's robots.txt injection.
 
 const ROBOTS = `User-agent: *
+Content-signal: search=yes, ai-input=yes, ai-train=no, use=reference
 Allow: /
 
 Disallow: /deployment/
 Disallow: /.git/
 
-# AI agents explicitly welcome (we publish llms.txt, /api/*, /llms-full.txt for them)
+# AI agents explicitly welcome for search and answer citations.
 User-agent: GPTBot
 Allow: /
 
