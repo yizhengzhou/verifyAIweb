@@ -7,8 +7,8 @@
 # Serve PDF lead magnets directly
 /lead-magnets/*  /lead-magnets/:splat  200
 
-# YouTube Ads landing page
-/go/*  /go/:splat  200
+# Legacy campaign URLs now enter the current landing page
+/go/*  /  302
 
 # Ads landing pages
 /ads/*  /ads/:splat  200
