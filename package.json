@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:blog && vite build",
+    "build": "npm run generate:guides && vite build",
     "preview": "vite preview",
-    "generate:blog": "node scripts/generate-blog-pages.js"
+    "generate:blog": "node scripts/generate-blog-pages.js",
+    "validate:blog": "node scripts/validate-blog-release.js",
+    "generate:guides": "node scripts/generate-seo-guides.cjs"
   },
   "dependencies": {
     "framer-motion": "^12.30.0",
