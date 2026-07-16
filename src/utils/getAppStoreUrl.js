@@ -36,8 +36,16 @@ const LANG_TO_COUNTRY = {
   'vi': 'vn',
 }
 
-export function getAppStoreUrl(lang) {
+export function getAppStoreUrl(lang, ctaId = null) {
   const effectiveLang = lang || navigator.language || (navigator.languages && navigator.languages[0]) || 'en'
   const country = LANG_TO_COUNTRY[effectiveLang] || LANG_TO_COUNTRY[effectiveLang.split('-')[0]] || 'us'
-  return `https://apps.apple.com/${country}/app/id${APP_ID}`
+  let url = `https://apps.apple.com/${country}/app/id${APP_ID}`
+  if (ctaId) {
+    url += `?ct=${encodeURIComponent(ctaId)}`
+  }
+  return url
+}
+
+export function getAppStoreUrlWithCta(lang, ctaId) {
+  return getAppStoreUrl(lang, ctaId)
 }
