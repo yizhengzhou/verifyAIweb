@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-07-18T23:00:51.796Z",
+  "generated_at": "2026-07-19T23:00:58.898Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-20-pnn-ai-55.html",
+      "slug": "2026-07-20-pnn-ai-55",
+      "lang": "zh",
+      "title": "詐團用AI變聲假扮兒子 新北老翁遭騙55萬",
+      "description": "公視新聞網報導，新北市一名老先生最近被詐騙了。詐騙集團利用 AI 變聲技術模仿他兒子的聲音，讓老先生信以為真，最後被騙走 55 萬元。",
+      "date": "2026-07-20",
+      "dateIso": "2026-07-20T07:00:58+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-07-20-pnn-ai-55.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-19-udn.html",
       "slug": "2026-07-19-udn",
