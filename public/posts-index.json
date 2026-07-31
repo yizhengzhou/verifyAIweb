@@ -1,6 +1,17 @@
 {
-  "generated_at": "2026-07-30T23:01:47.660Z",
+  "generated_at": "2026-07-31T23:00:48.036Z",
   "posts": [
+    {
+      "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-08-01-udn.html",
+      "slug": "2026-08-01-udn",
+      "lang": "zh",
+      "title": "網戀女友竟是詐騙劇本單身男險被騙光畢生積蓄",
+      "description": "根據 UDN 報導，一名單身男子在網路上交友，與對方建立起深厚感情。但這場戀愛其實是詐騙集團設計的劇本，對方利用網戀關係誘導他轉帳，讓他差點失去了畢生的積蓄。",
+      "date": "2026-08-01",
+      "dateIso": "2026-08-01T07:00:47+08:00",
+      "url": "https://verifyai.fork.work/blog/zh/daily/2026-08-01-udn.html",
+      "legacy": false
+    },
     {
       "file": "/home/yizheng/verifyAIweb/public/blog/zh/daily/2026-07-31-daily.html",
       "slug": "2026-07-31-daily",
