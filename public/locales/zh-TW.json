@@ -153,12 +153,12 @@
         "answer": "不會。照片只在搜尋過程中暫時處理，完成後即刪除，也不會用來訓練模型或分享給第三方。"
       },
       {
-        "question": "免費版和 Pro 版差在哪？",
-        "answer": "免費版只使用 1 個搜尋引擎；Pro 版同時使用 5 個專業引擎，更適合你已覺得不太對勁、想多確認的情況。"
+        "question": "VerifyAI 如何收費？",
+        "answer": "VerifyAI 沒有訂閱制，採用一次性購買模式。開始時附贈少量搜尋次數，用完後可購買 1 次、3 次或 10 次搜尋包。每次搜尋同時使用全部 4 個搜尋引擎。"
       },
       {
-        "question": "單次搜尋需要多久時間？",
-        "answer": "免費版大約 10-20 秒。Pro 版因需要跑 5 個引擎，可能要 30-60 秒，視網路速度而定。"
+        "question": "一次搜尋需要多久？",
+        "answer": "一般多引擎搜尋約 10-30 秒，依網路速度和圖片大小而定。"
       },
       {
         "question": "VerifyAI 的主要目的",
@@ -194,7 +194,7 @@
   },
   "footer": {
     "brandTitle": "VerifyAI",
-    "brandDescription": "深度反向圖片搜尋，AI 為你的社交與商務互動提供可靠的身分驗證服務。",
+    "brandDescription": "多引擎反向圖片搜尋，跨 Google、Yandex、Lens、Shutterstock 四大引擎。",
     "product": {
       "title": "產品",
       "features": "功能特色",

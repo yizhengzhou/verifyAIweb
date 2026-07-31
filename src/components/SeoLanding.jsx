@@ -11,7 +11,7 @@ const copy = {
     eyebrow: 'Reverse image search for online safety',
     title: 'Check the photo.\nBefore you trust the profile.',
     intro: 'VerifyAI searches the same image across Google, Yandex, Google Lens, and Shutterstock, then organizes the evidence so you can spot reused, stolen, or stock photos.',
-    primary: 'Download free for iPhone', secondary: 'See how it works', note: 'New users get 3 complimentary full searches. No account required to start.',
+    primary: 'Download free for iPhone', secondary: 'See how it works', note: 'No account needed. Photos are deleted after each search.',
     proof: ['4 search engines in one check', 'Exact-match and crop comparison', 'Clear source links — you review the evidence'],
     shotsTitle: 'See what the search finds', shotsBody: 'From one screenshot to source-by-source evidence. VerifyAI shows the work behind every result.',
     howTitle: 'How reverse image verification works', steps: [['01', 'Choose a photo', 'Use a profile photo, marketplace image, or screenshot you have a legitimate reason to check.'], ['02', 'Search multiple sources', 'VerifyAI checks four image search sources and compares likely exact or cropped matches.'], ['03', 'Review the evidence', 'Open source pages, compare context, and decide your next safe step. A match is a clue, not a verdict.']],
@@ -22,7 +22,7 @@ const copy = {
   'zh-TW': {
     eyebrow: '用反向圖片搜尋保護網路互動', title: '先查照片。\n再決定是否相信帳號。',
     intro: 'VerifyAI 同時搜尋 Google、Yandex、Google Lens 與 Shutterstock，整理每個來源的證據，協助你發現被重複使用、盜用或來自圖庫的照片。',
-    primary: '免費下載 iPhone App', secondary: '了解運作方式', note: '新用戶可免費使用 3 次完整搜尋，開始使用不必建立帳號。',
+    primary: '免費下載 iPhone App', secondary: '了解運作方式', note: '無需建立帳號。搜尋完成後圖片即刪除。',
     proof: ['一次查詢 4 個搜尋來源', '比對相同圖片與裁切版本', '提供原始來源，由你檢視證據'],
     shotsTitle: '從一張截圖，找到可核對的來源', shotsBody: 'VerifyAI 不只顯示結果，也清楚呈現每個搜尋與比對步驟。',
     howTitle: '反向圖片驗證怎麼運作', steps: [['01', '選擇照片', '使用你有正當理由查核的交友照、賣場圖片或聊天截圖。'], ['02', '同時搜尋多個來源', 'VerifyAI 查詢四個圖片搜尋來源，比對可能相同或經裁切的結果。'], ['03', '檢視證據', '開啟來源頁面、比較脈絡，再決定安全的下一步。搜尋結果是線索，不是定罪。']],
