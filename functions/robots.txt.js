@@ -9,6 +9,7 @@ Allow: /
 
 Disallow: /deployment/
 Disallow: /.git/
+Disallow: /go/
 
 # AI agents explicitly welcome for search and answer citations.
 User-agent: GPTBot

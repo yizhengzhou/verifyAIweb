@@ -10,6 +10,8 @@ export default function PrivacyPolicy() {
     document.title = `${t('privacyPolicy.pageTitle')} - VerifyAI`
     const desc = document.querySelector('meta[name="description"]')
     if (desc) desc.content = t('privacyPolicy.metaDescription')
+    const canon = document.querySelector('link[rel="canonical"]')
+    if (canon) canon.href = 'https://verifyai.fork.work/privacy'
   }
 
   const sections = t('privacyPolicy.sections')

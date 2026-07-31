@@ -10,6 +10,8 @@ export default function TermsOfService() {
     document.title = `${t('termsOfService.pageTitle')} - VerifyAI`
     const desc = document.querySelector('meta[name="description"]')
     if (desc) desc.content = t('termsOfService.metaDescription')
+    const canon = document.querySelector('link[rel="canonical"]')
+    if (canon) canon.href = 'https://verifyai.fork.work/terms'
   }
 
   const sections = t('termsOfService.sections')
