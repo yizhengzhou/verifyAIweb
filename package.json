@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:guides && vite build",
+    "build": "npm run generate:guides && npm run generate:sitemap && vite build",
     "preview": "vite preview",
     "generate:blog": "node scripts/generate-blog-pages.js",
     "validate:blog": "node scripts/validate-blog-release.js",
-    "generate:guides": "node scripts/generate-seo-guides.cjs"
+    "generate:guides": "node scripts/generate-seo-guides.cjs",
+    "generate:sitemap": "node scripts/generate-sitemap.cjs"
   },
   "dependencies": {
     "framer-motion": "^12.30.0",
