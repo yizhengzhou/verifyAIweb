@@ -36,6 +36,7 @@ export function getUtmParams() {
 export function parseSourceGroup(referrer, search) {
   const params = new URLSearchParams(search);
   const utmSource = params.get('utm_source');
+  const utmMedium = params.get('utm_medium');
   const gclid = params.get('gclid');
   const wbraid = params.get('wbraid');
   const gbraid = params.get('gbraid');
@@ -45,11 +46,9 @@ export function parseSourceGroup(referrer, search) {
     return 'google_ads';
   }
   
-  if (utmSource) {
-    const sourceLower = utmSource.toLowerCase();
-    if (['facebook', 'instagram', 'twitter', 'x', 'tiktok', 'youtube', 'linkedin', 'pinterest'].some(s => sourceLower.includes(s))) {
-      return 'social';
-    }
+  // AI 搜尋引擎來源 (GEO / AEO)
+  if (utmMedium === 'ai_search' || (utmSource && ['chatgpt', 'perplexity', 'claude', 'copilot', 'gemini'].some(s => utmSource.toLowerCase().includes(s)))) {
+    return 'ai_search';
   }
 
   if (referrer) {
@@ -57,19 +56,31 @@ export function parseSourceGroup(referrer, search) {
       const refUrl = new URL(referrer);
       const host = refUrl.hostname.toLowerCase();
       
+      // AI 搜尋引擎 Referrer
+      if (['chatgpt.com', 'chat.openai.com', 'perplexity.ai', 'claude.ai', 'copilot.microsoft.com', 'gemini.google.com'].some(s => host.includes(s))) {
+        return 'ai_search';
+      }
+
       // 搜尋引擎
       if (['google.', 'bing.', 'yahoo.', 'baidu.', 'duckduckgo.', 'yandex.'].some(s => host.includes(s))) {
         return 'organic_search';
       }
       
       // 社群媒體
-      if (['facebook.com', 'instagram.com', 't.co', 'twitter.com', 'x.com', 'tiktok.com', 'youtube.com', 'linkedin.com', 'pinterest.com'].some(s => host.includes(s))) {
+      if (['facebook.com', 'instagram.com', 't.co', 'twitter.com', 'x.com', 'tiktok.com', 'youtube.com', 'linkedin.com', 'pinterest.com', 'threads.net'].some(s => host.includes(s))) {
         return 'social';
       }
       
       return 'referral';
     } catch (e) {
       // referrer 格式不正確或為空時 fallback
+    }
+  }
+
+  if (utmSource) {
+    const sourceLower = utmSource.toLowerCase();
+    if (['facebook', 'instagram', 'twitter', 'x', 'tiktok', 'youtube', 'linkedin', 'pinterest', 'threads'].some(s => sourceLower.includes(s))) {
+      return 'social';
     }
   }
   
@@ -158,4 +169,46 @@ export function trackAppStoreClick(ctaId, ctaLocation, pageType, language) {
       }
     }
   }
+}
+/**
+ * 追蹤 FAQ 展開事件
+ * @param {string} faqId FAQ 題目識別碼或文字
+ * @param {string} language 語系
+ */
+export function trackFaqToggle(faqId, language) {
+  trackEvent('click_faq', {
+    faq_id: faqId,
+    language: language || 'en',
+    page_path: typeof window !== 'undefined' ? window.location.pathname : '/'
+  });
+}
+
+/**
+ * 監聽並追蹤頁面滾動深度 (25%, 50%, 75%, 100%)
+ */
+export function initScrollDepthTracking() {
+  if (typeof window === 'undefined') return () => {};
+  
+  const thresholds = [25, 50, 75, 100];
+  const reached = new Set();
+  
+  const handleScroll = () => {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+    
+    const scrolled = (window.scrollY / docHeight) * 100;
+    
+    thresholds.forEach(t => {
+      if (scrolled >= t && !reached.has(t)) {
+        reached.add(t);
+        trackEvent('scroll_depth', {
+          depth_percent: t,
+          page_path: window.location.pathname
+        });
+      }
+    });
+  };
+  
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  return () => window.removeEventListener('scroll', handleScroll);
 }

@@ -1,5 +1,6 @@
 import { useI18n } from '../context/I18nContext'
 import { getAppStoreUrl } from '../utils/getAppStoreUrl'
+import { trackAppStoreClick } from '../utils/tracking'
 import PipelineAnimation from './PipelineAnimation'
 
 export default function Hero() {
@@ -16,12 +17,13 @@ export default function Hero() {
         <p className="hero-long-description">{t('hero.description')}</p>
         <div className="cta-buttons">
           <a
-            href={getAppStoreUrl(lang)}
+            href={getAppStoreUrl(lang, 'rt_home_hero')}
             className="btn btn-primary btn-round"
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`${t('hero.ctaButton')} - App Store`}
             onClick={() => {
+              trackAppStoreClick('rt_home_hero', 'hero', 'home', lang)
               if (window.gtag) {
                 window.gtag('event', 'conversion', { send_to: 'AW-18226736945/tHpKCJrLtr0cELHel_ND' })
               }
